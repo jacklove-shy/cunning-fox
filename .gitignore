@@ -1,0 +1,29 @@
+# ---- 依赖与构建产物 ----
+node_modules/
+dist/
+apps/api/dist/
+apps/web/dist/
+*.tsbuildinfo
+
+# ---- 配置与机密（绝不入库） ----
+.env
+.env.*
+!.env.example
+
+# ---- 运行时数据：含密码哈希与 Token 签名密钥 ----
+apps/api/data/auth.json
+
+# ---- 工具运行时临时产物 / 个人求职同步数据 ----
+apps/api/data/work/
+apps/api/data/job-sync/
+
+# ---- 备份与杂项 ----
+*.bak
+*.bak-*
+*.log
+shots/
+.DS_Store
+Thumbs.db
+
+# ---- 浏览器临时数据（勿入库） ----
+.edge-tmp/

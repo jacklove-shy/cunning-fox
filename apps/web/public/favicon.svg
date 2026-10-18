@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" shape-rendering="geometricPrecision">
+  <!-- 耳朵 -->
+  <polygon points="22,9 37,41 9,34" fill="#ef7d3a"/>
+  <polygon points="78,9 91,34 63,41" fill="#ef7d3a"/>
+  <polygon points="24,18 33,37 17,33" fill="#c85a1f"/>
+  <polygon points="76,18 83,33 67,37" fill="#c85a1f"/>
+  <!-- 脸（上宽下尖的盾形）-->
+  <path d="M19,34 Q50,29 81,34 L65,61 Q50,95 35,61 Z" fill="#f4904e"/>
+  <!-- 白色口鼻 -->
+  <polygon points="50,57 37,69 63,69" fill="#fff7ef"/>
+  <!-- 鼻头 -->
+  <polygon points="50,73 44,67 56,67" fill="#23252b"/>
+  <!-- 眼睛（带一点狡黠的上挑感）-->
+  <path d="M31,52 Q38,46 45,50 Q39,53 32,55 Z" fill="#23252b"/>
+  <path d="M69,52 Q62,46 55,50 Q61,53 68,55 Z" fill="#23252b"/>
+</svg>

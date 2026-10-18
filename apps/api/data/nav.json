@@ -1,0 +1,2131 @@
+{
+  "kicker": "bookmarks",
+  "title": "导航",
+  "intro": "常用网站与工具收录，按分类浏览或直接搜索；外链在新标签打开，本站自有工具也能直接点开使用。",
+  "updatedAt": "2026-10-17T15:29:45.306Z",
+  "cats": [
+    {
+      "name": "设计素材",
+      "items": [
+        {
+          "name": "Instagram",
+          "desc": "instagram.com",
+          "url": "https://www.instagram.com"
+        },
+        {
+          "name": "免费中文字体免费下载-免费中文字体在线预览-猫啃网-第4页",
+          "desc": "猫啃网收集了丰富的免费中文相关字体，提供免费中文字体免费下载和在线预览服务，您可以在网站上实时预览字体效果，并且免费把免费中文字体下载到本地进行使用。",
+          "url": "https://www.maoken.com/freefonts/page/4",
+          "logo": "/logos/maoken.com.ico"
+        },
+        {
+          "name": "Pinterest",
+          "desc": "Discover recipes, home ideas, style inspiration and other ideas to try.",
+          "url": "https://www.pinterest.com"
+        },
+        {
+          "name": "巨量创意",
+          "desc": "cc.oceanengine.com",
+          "url": "https://cc.oceanengine.com",
+          "logo": "/logos/cc.oceanengine.com.svg"
+        },
+        {
+          "name": "美叶",
+          "desc": "发现优质设计灵感，涵盖品牌、插画、UI、摄影等各类设计参考。",
+          "url": "https://www.meiye.art",
+          "logo": "/logos/meiye.art.ico"
+        },
+        {
+          "name": "花瓣",
+          "desc": "花瓣网,设计师寻找灵感的平台!这里汇聚海量高清创意图片与设计素材,通过智能采集工具助你高效整理灵感.无论是保存优质素材,规划设计方案,还是分享个人创意收藏,花瓣网都能满足设计师需求",
+          "url": "https://huaban.com",
+          "logo": "/logos/huaban.com.ico"
+        },
+        {
+          "name": "牛片网",
+          "desc": "牛片专注影视广告资源整合,影视公司提供宣传片样片报价,广告片文案脚本策划,短视频拍摄,企业宣传片制作;创作人提供视频制作,mg动画,flash动画,3d三维动画制作;平台为兼职摄影",
+          "url": "https://www.6pian.cn",
+          "logo": "/logos/6pian.cn.ico"
+        },
+        {
+          "name": "Icônes",
+          "desc": "icones.js.org",
+          "url": "https://icones.js.org/",
+          "logo": "/logos/icones.js.org.png"
+        },
+        {
+          "name": "IconPark",
+          "desc": "IconPark, park your icon. Made by ByteDance",
+          "url": "https://iconpark.oceanengine.com/official",
+          "logo": "/logos/iconpark.oceanengine.com.svg"
+        },
+        {
+          "name": "摄图网",
+          "desc": "摄图网是一家专注于正版高清图片视频素材的网站,提供插画,海报,ppt模板,摄影图,背景,转场,片头片尾等海量素材下载。还有AI修图,AI模板,AI视频,AI生图等多种AI工具为您的",
+          "url": "http://699pic.com",
+          "logo": "/logos/699pic.com.ico"
+        },
+        {
+          "name": "昵图网",
+          "desc": "昵图网_原创素材共享平台.图片素材图库提供海量原创素材,图片下载,摄影作品,设计素材,视频素材,ppt模板,PSD源文件,矢量图,AI,CDR,EPS等高清图片下载.",
+          "url": "http://www.nipic.com",
+          "logo": "/logos/nipic.com.ico"
+        },
+        {
+          "name": "易企秀",
+          "desc": "store.eqxiu.com",
+          "url": "https://store.eqxiu.com"
+        },
+        {
+          "name": "觅元素",
+          "desc": "觅元素提供免费PNG素材、免抠元素、高清背景图片下载，内置AI生图、智能抠图、智能扩图、AI变清晰、图片擦除等AI创作工具，海量版权素材免费下载，找素材做设计就上觅元素。",
+          "url": "http://www.51yuansu.com",
+          "logo": "/logos/51yuansu.com.png"
+        },
+        {
+          "name": "字由",
+          "desc": "字由是免费的字体管理工具，为您提供900+字体免费商用，支持在PS、AI、ID、XD、Figma、Sketch、CDR等设计软件中一键应用字体，提供AI识字、字体特效等实用功能，为",
+          "url": "https://www.hellofont.cn",
+          "logo": "/logos/hellofont.cn.ico"
+        },
+        {
+          "name": "Dribbble",
+          "desc": "DeviantArt is where art and community thrive. Explore over 350 million pieces of art while",
+          "url": "https://www.deviantart.com"
+        },
+        {
+          "name": "Iconfont",
+          "desc": "iconfont-国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造，设计和前端开发的便捷工具",
+          "url": "https://www.iconfont.cn",
+          "logo": "/logos/iconfont.cn.svg"
+        },
+        {
+          "name": "DeviantART",
+          "desc": "Find Top Designers & Creative Professionals on Dribbble. We are where designers gain inspi",
+          "url": "https://dribbble.com"
+        },
+        {
+          "name": "千图网",
+          "desc": "ǧͼ��(www.58pic.com) ��רע��������ͼƬ�ز�������������ص���վ���ṩʸ��ͼ�زġ�����ͼƬ��psd�زġ�����ģ�塢��",
+          "url": "https://www.58pic.com",
+          "logo": "/logos/58pic.com.ico"
+        },
+        {
+          "name": "包图网",
+          "desc": "包图网拥有亿级正版商用素材模板，为企业 、政府机关、个人用户提供原创可商用的精品版权，涵盖4K/8K高清视频、AE模板、MG动画、配乐音效、AI素材、AI视频、AI音乐、PPT模板",
+          "url": "https://ibaotu.com",
+          "logo": "/logos/ibaotu.com.png"
+        }
+      ]
+    },
+    {
+      "name": "设计教程",
+      "items": [
+        {
+          "name": "学堂在线",
+          "desc": "学堂在线是清华大学于2013年10月发起建立的慕课平台，是教育部在线教育研究中心的研究交流和成果应用平台，是国家2016年首批双创示范基地项目，是中国高等教育学会产教融合研究分会副",
+          "url": "https://next.xuetangx.com",
+          "logo": "/logos/next.xuetangx.com.ico"
+        },
+        {
+          "name": "JS每日一题",
+          "desc": "web前端面试,vue面试题,react面试题,js面试题,大厂面试题,阿里面试题,京东面试题",
+          "url": "https://vue3js.cn/interview"
+        },
+        {
+          "name": "FE-Interview",
+          "desc": "本文系统梳理了前端高频面试题基础知识，涵盖HTML、HTTP、Web综合问题及SEO优化实战，助力开发者高效备考",
+          "url": "http://interview.poetries.top/docs/base.html",
+          "logo": "/logos/interview.poetries.top.ico"
+        },
+        {
+          "name": "我要自学网",
+          "desc": "��Ҫ��ѧ��-�����Ƶ�̳�,�ṩȫ��λ����ѧϰ����3D�̳̣�ƽ��̳̣���ý�������̳̣��칫��Ϣ���̳̣���е��ƽ̳̣���վ�����̳�",
+          "url": "https://www.51zxw.net"
+        },
+        {
+          "name": "LottieFile",
+          "desc": "Explore our featured free Lottie animations, handpicked for quality and creativity. Discov",
+          "url": "https://lottiefiles.com/featured"
+        },
+        {
+          "name": "力扣",
+          "desc": "海量技术面试题库，拥有算法、数据结构、系统设计等 1000+题目，帮助你高效提升编程技能，轻松拿下世界 IT 名企 Dream Offer。",
+          "url": "https://leetcode-cn.com",
+          "logo": "/logos/leetcode-cn.com.ico"
+        },
+        {
+          "name": "站酷网",
+          "desc": "站酷ZCOOL中国设计师互动平台，汇聚AI设计、平面设计、UI设计、插画、网页、动画、三维、摄影、影视、字体、素材等优质内容，为千万设计师提供作品展示、交流学习与素材下载、求职接单",
+          "url": "https://www.zcool.com.cn",
+          "logo": "/logos/zcool.com.cn.ico"
+        },
+        {
+          "name": "下厨房",
+          "desc": "下厨房美食菜谱网倡导在家烹饪、健康的生活方式，提供有版权的实用菜谱做法与饮食知识，提供厨师和美食爱好者一个记录、分享的平台。",
+          "url": "http://www.xiachufang.com"
+        },
+        {
+          "name": "牛客网",
+          "desc": "求职之前，先上牛客，就业找工作一站解决。互联网IT技术/产品/运营/硬件/汽车机械制造/金融/财务管理/审计/银行/市场营销/地产/快消/管培生等等专业技能学习/备考/求职神器，在",
+          "url": "https://www.nowcoder.com",
+          "logo": "/logos/nowcoder.com.ico"
+        },
+        {
+          "name": "中国大学",
+          "desc": "中国大学MOOC,MOOC,慕课,在线学习,在线教育,大规模开放式在线课程,网络公开课,视频公开课,大学公开课,大学mooc,icourse163,慕课网, MOOC学院",
+          "url": "https://www.icourse163.org"
+        },
+        {
+          "name": "网易云课堂",
+          "desc": "网易云课堂，一个专注于成人终身学习的在线教育平台。立足于实用性的要求, 与优质的教育内容创作者一起，为您提供全面、有效的在线学习内容。",
+          "url": "https://study.163.com",
+          "logo": "/logos/study.163.com.ico"
+        },
+        {
+          "name": "虎课网",
+          "desc": "huke88.com",
+          "url": "https://huke88.com",
+          "logo": "/logos/huke88.com.png"
+        },
+        {
+          "name": "慕课网",
+          "desc": "imooc.com",
+          "url": "https://www.imooc.com",
+          "logo": "/logos/imooc.com.ico"
+        }
+      ]
+    },
+    {
+      "name": "软件下载",
+      "items": [
+        {
+          "name": "软件资源下载站",
+          "desc": "电脑软件游戏资源共享 - 搜索狗资源网、免费资源下载网站、PC单机游戏、3ds游戏下载cia、switch游戏资源、PS主机游戏等、更有安卓手机游戏、电脑绿色软件、安卓绿色软件、4",
+          "url": "https://www.sosuogou.com",
+          "logo": "/logos/sosuogou.com.png"
+        },
+        {
+          "name": "百度网盘",
+          "desc": "百度网盘是一款国民级产品，已连续9年为超过7亿用户提供稳定、安全的个人云存储服务，已实现电脑、手机、电视等多种终端场景的覆盖和互联，并支持多类型文件的备份、分享、查看和处理",
+          "url": "https://pan.baidu.com/disk/home?#/all?path=%2F&vmode=list"
+        },
+        {
+          "name": "IT教程吧",
+          "desc": "IT教程吧-编程开发",
+          "url": "https://www.itjc8.com/forum.php?gid=1",
+          "logo": "/logos/itjc8.com.ico"
+        },
+        {
+          "name": "JetBrains 屠龙宝刀",
+          "desc": "jb.ide.to",
+          "url": "http://jb.ide.to/",
+          "logo": "/logos/jb.ide.to.ico"
+        },
+        {
+          "name": "IDEA激活码",
+          "desc": "ajihuo.com",
+          "url": "https://www.ajihuo.com/",
+          "logo": "/logos/ajihuo.com.png"
+        },
+        {
+          "name": "Appstorrent",
+          "desc": "Сотни приложений, игр и плагинов для macOS. Релизы от TNT, HCiSO, Monter Group, ACTiVATED ",
+          "url": "https://appstorrent.ru",
+          "logo": "/logos/appstorrent.ru.png"
+        },
+        {
+          "name": "大眼仔",
+          "desc": "大眼仔旭网站是个人非盈利性网站，主要以分享日常工作生活办公技术资源为主，大眼仔热衷于分享互联网上一切所有美好事物，希望和您一起成长。",
+          "url": "http://www.dayanzai.me/",
+          "logo": "/logos/dayanzai.me.ico"
+        },
+        {
+          "name": "果核剥壳",
+          "desc": "果核剥壳是一个长期更新的综合科技网站，内容涵盖绿色软件、系统工具、效率应用与科技资讯，坚持分享真正有用、有价值的资源与观点。",
+          "url": "https://www.ghpym.com/",
+          "logo": "/logos/ghpym.com.ico"
+        },
+        {
+          "name": "亦是美网络",
+          "desc": "亦是美网络，致力于操作系统应用与计算机网络技术的IT网站。",
+          "url": "http://www.yishimei.cn",
+          "logo": "/logos/yishimei.cn.png"
+        },
+        {
+          "name": "Adobe全家桶",
+          "desc": "Adobe GenP 几乎可以破解所有Windows版的Adobe软件(CC 2019-2026)，破解方法方便快捷。妈妈再也不用担心。 迄今为止最完整的解决方案…… 只需3个步骤",
+          "url": "https://jpsmile.com/genp-v3/",
+          "logo": "/logos/jpsmile.com.png"
+        },
+        {
+          "name": "吾爱破解",
+          "desc": "精品软件推荐，软件交流天地，汇集众多精彩评论，热心会员每日更新。找你所需要的，给你我分享的！这里不但有PC软件，安卓、iPhone等手机软件也统统包含。",
+          "url": "https://www.52pojie.cn/forum-16-1.html",
+          "logo": "/logos/52pojie.cn.png"
+        },
+        {
+          "name": "MSDN我告诉你",
+          "desc": "NEXT, ITELLYOU",
+          "url": "https://next.itellyou.cn",
+          "logo": "/logos/next.itellyou.cn.ico"
+        }
+      ]
+    },
+    {
+      "name": "开发文档",
+      "items": [
+        {
+          "name": "Socket.IO",
+          "desc": "socket.io",
+          "url": "https://socket.io/zh-CN/",
+          "logo": "/logos/socket.io.png"
+        },
+        {
+          "name": "V2Board",
+          "desc": "A VitePress site",
+          "url": "https://docs.v2board.com/CHANGELOG.html"
+        },
+        {
+          "name": "Vites",
+          "desc": "Next generation testing framework powered by Vite",
+          "url": "https://cn.vitest.dev/guide/",
+          "logo": "/logos/cn.vitest.dev.ico"
+        },
+        {
+          "name": "Vite",
+          "desc": "Next Generation Frontend Tooling",
+          "url": "https://cn.vitejs.dev",
+          "logo": "/logos/cn.vitejs.dev.svg"
+        },
+        {
+          "name": "Webpack",
+          "desc": "webpack 是一个模块打包器。它的主要目标是将 JavaScript 文件打包在一起，打包后的文件用于在浏览器中使用，但它也能够胜任转换、打包或包裹任何资源。",
+          "url": "https://www.webpackjs.com/concepts",
+          "logo": "/logos/webpackjs.com.ico"
+        },
+        {
+          "name": "Node",
+          "desc": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets d",
+          "url": "https://nodejs.org/en",
+          "logo": "/logos/nodejs.org.png"
+        },
+        {
+          "name": "Electron",
+          "desc": "electronjs.org",
+          "url": "https://www.electronjs.org/zh/docs/latest/tutorial/quick-start"
+        },
+        {
+          "name": "electron-vite",
+          "desc": "Next generation Electron build tooling based on Vite.",
+          "url": "https://cn-evite.netlify.app/guide/",
+          "logo": "/logos/cn-evite.netlify.app.ico"
+        },
+        {
+          "name": "Sequelize",
+          "desc": "Sequelize 是一个基于 promise 的 Node.js ORM, 目前支持 Postgres, MySQL, MariaDB, SQLite 以及 Microsoft ",
+          "url": "https://www.sequelize.com.cn/",
+          "logo": "/logos/sequelize.com.cn.ico"
+        },
+        {
+          "name": "TypeORM",
+          "desc": "TypeORM is an ORM that can run in NodeJS, Browser, Cordova, Ionic, React Native, NativeScr",
+          "url": "https://typeorm.io",
+          "logo": "/logos/typeorm.io.ico"
+        },
+        {
+          "name": "Nestjs",
+          "desc": "Nest is a framework for building efficient, scalable Node.js server-side applications. It ",
+          "url": "https://docs.nestjs.com",
+          "logo": "/logos/docs.nestjs.com.ico"
+        },
+        {
+          "name": "Midway",
+          "desc": "Midway 基于渐进式理念研发的 Node.js 框架，通过自研的依赖注入容器，搭配各种上层模块，组合出适用于不同场景的解决方案。",
+          "url": "https://midwayjs.org/docs/intro",
+          "logo": "/logos/midwayjs.org.ico"
+        },
+        {
+          "name": "Eggjs",
+          "desc": "Born to build better enterprise frameworks and apps",
+          "url": "https://www.eggjs.org/zh-CN/intro/quickstart",
+          "logo": "/logos/eggjs.org.png"
+        },
+        {
+          "name": "cordova",
+          "desc": "cordova.apache.org",
+          "url": "https://cordova.apache.org/#getstarted",
+          "logo": "/logos/cordova.apache.org.ico"
+        },
+        {
+          "name": "NuxtJS",
+          "desc": "Access the reactive app config defined in the project.",
+          "url": "https://nuxt.com/docs/api/composables/use-app-config",
+          "logo": "/logos/nuxt.com.ico"
+        },
+        {
+          "name": "Taro",
+          "desc": "简介",
+          "url": "https://docs.taro.zone/docs/"
+        },
+        {
+          "name": "VantWeapp",
+          "desc": "轻量、可靠的小程序 UI 组件库",
+          "url": "https://vant-ui.github.io/vant-weapp/#/quickstart",
+          "logo": "/logos/vant-ui.github.io.png"
+        },
+        {
+          "name": "Lin-UI",
+          "desc": "Lin UI 是基于微信小程序原生语法 实现的组件库。遵循简洁、易用的设计规范。",
+          "url": "https://doc.mini.talelin.com/start/",
+          "logo": "/logos/doc.mini.talelin.com.ico"
+        },
+        {
+          "name": "微信官方文档",
+          "desc": "微信开发者平台文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/",
+          "logo": "/logos/developers.weixin.qq.com.ico"
+        },
+        {
+          "name": "微信公众平台",
+          "desc": "微信公众平台，给个人、企业和组织提供业务服务与用户管理能力的全新服务平台。",
+          "url": "https://mp.weixin.qq.com",
+          "logo": "/logos/mp.weixin.qq.com.png"
+        },
+        {
+          "name": "SzAdmin",
+          "desc": "Sz-Admin 是一个开源 RBAC 中后台框架，基于 Spring Boot 4、JDK 25、Vue 3 和 Vite 7 构建，集成 MyBatis-Flex、Sa-Tok",
+          "url": "https://szadmin.cn/",
+          "logo": "/logos/szadmin.cn.png"
+        },
+        {
+          "name": "Geeker Admin",
+          "desc": "Geeker Admin 中文文档",
+          "url": "https://docs.spicyboy.cn/guide/introduce.html",
+          "logo": "/logos/docs.spicyboy.cn.svg"
+        },
+        {
+          "name": "Ant Design Pro",
+          "desc": "preview.pro.ant.design",
+          "url": "https://preview.pro.ant.design/dashboard/analysis",
+          "logo": "/logos/preview.pro.ant.design.ico"
+        },
+        {
+          "name": "VbenAdmin",
+          "desc": "Vben Admin & 企业级管理系统框架",
+          "url": "https://doc.vben.pro/",
+          "logo": "/logos/doc.vben.pro.ico"
+        },
+        {
+          "name": "Varlet",
+          "desc": "Varlet UI is a Material design component library developed based on Vue3, supporting mobil",
+          "url": "https://varletjs.org/#/zh-CN/home",
+          "logo": "/logos/varletjs.org.png"
+        },
+        {
+          "name": "Ant Design of Vue",
+          "desc": "An enterprise-class UI components based on Ant Design and Vue",
+          "url": "https://www.antdv.com/components/overview-cn/",
+          "logo": "/logos/antdv.com.ico"
+        },
+        {
+          "name": "Vue DevUI",
+          "desc": "Vue DevUI 组件库",
+          "url": "https://vue-devui.github.io/quick-start/",
+          "logo": "/logos/vue-devui.github.io.svg"
+        },
+        {
+          "name": "Vuetify",
+          "desc": "Details for v4 release - faq, changes, and upgrading.",
+          "url": "https://next.vuetifyjs.com/en/getting-started/installation/",
+          "logo": "/logos/next.vuetifyjs.com.ico"
+        },
+        {
+          "name": "Naive UI",
+          "desc": "naiveui.com",
+          "url": "https://www.naiveui.com/zh-CN/os-theme/docs/installation",
+          "logo": "/logos/naiveui.com.svg"
+        },
+        {
+          "name": "TDesign",
+          "desc": "TDesign 是腾讯开源的企业级设计体系，提供了统一价值观，一致的设计语言和视觉风格，和开箱即用的 UI 组件库。致力于为设计师 & 开发者，打造工作美学。",
+          "url": "https://tdesign.tencent.com/",
+          "logo": "/logos/tdesign.tencent.com.ico"
+        },
+        {
+          "name": "VueDataUi",
+          "desc": "A user-empowering data visualization Vue3 components library for eloquent data storytellin",
+          "url": "https://vue-data-ui.graphieros.com/universal-component",
+          "logo": "/logos/vue-data-ui.graphieros.com.ico"
+        },
+        {
+          "name": "Element+",
+          "desc": "A Vue 3 based component library for designers and developers",
+          "url": "https://element-plus.org/zh-CN/component/button.html",
+          "logo": "/logos/element-plus.org.svg"
+        },
+        {
+          "name": "arkUI",
+          "desc": "ArkUI是一套构建分布式应用界面的声明式UI开发框架。它使用简洁的UI信息语法、丰富的UI组件、以及实时界面预览工具,帮助您提升HarmonyOS应用界面开发效率30%。",
+          "url": "https://developer.harmonyos.com/cn/develop/arkUI/"
+        },
+        {
+          "name": "unibest",
+          "desc": "最好用的 uniapp 开发模板",
+          "url": "https://www.unibest.tech",
+          "logo": "/logos/unibest.tech.ico"
+        },
+        {
+          "name": "Wot Design Uni",
+          "desc": "一个参照wot-design打造的uni-app组件库",
+          "url": "https://wot-design-uni.pages.dev/",
+          "logo": "/logos/wot-design-uni.pages.dev.ico"
+        },
+        {
+          "name": "uv-ui",
+          "desc": "uv-ui，基于uni-app和uView2.x的生态框架，支持单独导入，破釜沉舟之兼容vue3+2、nvue、app、h5、小程序等多端，开箱即用，利剑出击。是uni-app生态",
+          "url": "https://www.uvui.cn/components/intro.html"
+        },
+        {
+          "name": "sard-uniapp",
+          "desc": "Sard uniapp | uniapp UI 组件库",
+          "url": "https://sutras.github.io/sard-uniapp-docs/#/guide/quickstart"
+        },
+        {
+          "name": "uViewUi",
+          "desc": "uView UI，是 uni-app 生态最优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水",
+          "url": "https://www.uviewui.com/components/intro.html",
+          "logo": "/logos/uviewui.com.ico"
+        },
+        {
+          "name": "Uni-app",
+          "desc": "uni-app,uniCloud,serverless,组件使用的入门教程,组件的属性类型,公共属性列表,在组件中使用script的data变量,组件的事件,基础组件,基础组件列表",
+          "url": "https://uniapp.dcloud.net.cn/component/"
+        },
+        {
+          "name": "NutUi",
+          "desc": "京东风格的轻量级移动端 Vue 组件库",
+          "url": "https://nutui.jd.com/h5/vue/4x/#/zh-CN/component/button",
+          "logo": "/logos/nutui.jd.com.ico"
+        },
+        {
+          "name": "Vant",
+          "desc": "A lightweight, customizable Vue UI library for mobile web apps.",
+          "url": "https://vant-ui.github.io/vant/#/zh-CN/quickstart",
+          "logo": "/logos/vant-ui.github.io.png"
+        },
+        {
+          "name": "Flutter",
+          "desc": "介绍如何用 Flutter 构建界面",
+          "url": "https://flutter.cn/docs/ui",
+          "logo": "/logos/flutter.cn.png"
+        },
+        {
+          "name": "VForm",
+          "desc": "VForm是一款基于Vue的低代码、可视化表单, 定位为前端开发人员提供快速搭建表单、实现表单交互和数据收集的功能。VForm由表单设计器VFormDesigner和表单渲染器VF",
+          "url": "https://www.vform666.com/vform3/"
+        },
+        {
+          "name": "UmiJS",
+          "desc": "Umi是可扩展的企业级前端应用框架。Umi 以路由为基础，同时支持配置式路由和约定式路由，保证路由的功能完备，并以此进行功能扩展。然后配以生命周期完善的插件体系，覆盖从源码到构建产",
+          "url": "https://umijs.org/docs/tutorials/getting-started"
+        },
+        {
+          "name": "Ant Design",
+          "desc": "基于 Ant Design 设计体系的 React UI 组件库，用于研发企业级中后台产品。",
+          "url": "https://ant.design/components/button-cn"
+        },
+        {
+          "name": "Ahooks",
+          "desc": "ahooks.js.org",
+          "url": "https://ahooks.js.org/zh-CN/hooks/use-request/index"
+        },
+        {
+          "name": "Swiper",
+          "desc": "通过在线演示直观地了解Swiper3.x的基础配置、使用方法。查看中文API了解Swiper3.x的参数、属性、事件、回调函数等。",
+          "url": "https://www.swiper.com.cn/api/index.html",
+          "logo": "/logos/swiper.com.cn.ico"
+        },
+        {
+          "name": "React",
+          "desc": "The library for web and native user interfaces",
+          "url": "https://zh-hans.reactjs.org/tutorial/tutorial.html",
+          "logo": "/logos/zh-hans.reactjs.org.ico"
+        },
+        {
+          "name": "PPChart",
+          "desc": "PPChart 收录 ECharts 图表示例，支持检索、预览与代码调试。",
+          "url": "https://www.ppchart.com/#/",
+          "logo": "/logos/ppchart.com.ico"
+        },
+        {
+          "name": "eslint-config",
+          "desc": "Anthony's ESLint config preset. Contribute to antfu/eslint-config development by creating ",
+          "url": "https://github.com/antfu/eslint-config",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "Oxc",
+          "desc": "A collection of high-performance JavaScript tools written in Rust",
+          "url": "https://oxc.rs/",
+          "logo": "/logos/oxc.rs.svg"
+        },
+        {
+          "name": "stylelint",
+          "desc": "You can quickly get started by extending an appropriate shared config.",
+          "url": "https://stylelint.io/user-guide/get-started"
+        },
+        {
+          "name": "Animista",
+          "desc": "Animista is a CSS animation library and a place where you can play with a collection of re",
+          "url": "https://animista.net/",
+          "logo": "/logos/animista.net.ico"
+        },
+        {
+          "name": "Shiro",
+          "desc": "shiroi.netlify.app",
+          "url": "https://shiroi.netlify.app",
+          "logo": "/logos/shiroi.netlify.app.ico"
+        },
+        {
+          "name": "Lodash",
+          "desc": "Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库。",
+          "url": "https://www.lodashjs.com",
+          "logo": "/logos/lodashjs.com.ico"
+        },
+        {
+          "name": "ECharts",
+          "desc": "Apache ECharts，一款基于JavaScript的数据可视化图表库，提供直观，生动，可交互，可个性化定制的数据可视化图表。",
+          "url": "https://echarts.apache.org/zh/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts",
+          "logo": "/logos/echarts.apache.org.ico"
+        },
+        {
+          "name": "VueUse",
+          "desc": "Collection of essential Vue Composition Utilities",
+          "url": "https://vueuse.org/guide/",
+          "logo": "/logos/vueuse.org.ico"
+        },
+        {
+          "name": "凹凸实验室",
+          "desc": "DOCTYPE 声明一个DOCTYPE必须包含以下部分，并严格按照顺序出现： A string that is an ASCII case-insensitive match fo",
+          "url": "https://guide.aotu.io/docs/html/code.html",
+          "logo": "/logos/guide.aotu.io.png"
+        },
+        {
+          "name": "MAGIC—EFFECTS",
+          "desc": "Magic CSS are a set of simple animations to include in your web or app project's",
+          "url": "https://www.minimamente.com/project/magic/",
+          "logo": "/logos/minimamente.com.png"
+        },
+        {
+          "name": "md-editor-v3",
+          "desc": "md-editor-v3 is a Markdown editor component developed based on Vue 3 and TSX, supporting r",
+          "url": "https://imzbf.github.io/md-editor-v3/index",
+          "logo": "/logos/imzbf.github.io.ico"
+        },
+        {
+          "name": "Pinia",
+          "desc": "值得你喜欢的 Vue Store",
+          "url": "https://pinia.vuejs.org/zh/introduction.html",
+          "logo": "/logos/pinia.vuejs.org.png"
+        },
+        {
+          "name": "MDN",
+          "desc": "MDN Web Docs 网站提供有关开放 Web 技术的信息，包括 HTML、CSS 以及适用于网站和渐进式 Web 应用的 API。",
+          "url": "https://developer.mozilla.org/zh-CN/",
+          "logo": "/logos/developer.mozilla.org.png"
+        },
+        {
+          "name": "RxJS",
+          "desc": "rxjs.dev",
+          "url": "https://rxjs.dev/guide/overview",
+          "logo": "/logos/rxjs.dev.ico"
+        },
+        {
+          "name": "Moment",
+          "desc": "Moment.js 中文网",
+          "url": "http://momentjs.cn/"
+        },
+        {
+          "name": "vue-esign",
+          "desc": "npmjs.com",
+          "url": "https://www.npmjs.com/package/vue-esign"
+        },
+        {
+          "name": "wangEditor 5",
+          "desc": "开源 Web 富文本编辑器，开箱即用，配置简单",
+          "url": "https://www.wangeditor.com/v5/getting-started.html",
+          "logo": "/logos/wangeditor.com.ico"
+        },
+        {
+          "name": "CSS-Inspiration",
+          "desc": "csc inspiration guide online",
+          "url": "https://chokcoco.github.io/CSS-Inspiration/#/./init",
+          "logo": "/logos/chokcoco.github.io.png"
+        },
+        {
+          "name": "Vuex",
+          "desc": "Vue.js 的中心化状态管理方案",
+          "url": "https://vuex.vuejs.org/zh/index.html",
+          "logo": "/logos/vuex.vuejs.org.png"
+        },
+        {
+          "name": "Vxe Table",
+          "desc": "vxetable.cn",
+          "url": "https://vxetable.cn/#/demo/list",
+          "logo": "/logos/vxetable.cn.ico"
+        },
+        {
+          "name": "Animate",
+          "desc": "Animate.css is a library of ready-to-use, cross-browser animations for you to use in your ",
+          "url": "https://animate.style",
+          "logo": "/logos/animate.style.ico"
+        },
+        {
+          "name": "Vue Router",
+          "desc": "Vue.js 的官方路由",
+          "url": "https://router.vuejs.org/zh/guide/",
+          "logo": "/logos/router.vuejs.org.png"
+        },
+        {
+          "name": "Dayjs",
+          "desc": "Day.js 可以运行在浏览器和 Node.js 中。",
+          "url": "https://day.js.org/docs/zh-CN/installation/installation"
+        },
+        {
+          "name": "Sass",
+          "desc": "Sass是世界上最成熟、稳定和强大的专业级CSS扩展语言",
+          "url": "https://www.sass.hk/docs",
+          "logo": "/logos/sass.hk.ico"
+        },
+        {
+          "name": "Vue.js 插件集合",
+          "desc": "Discover and explore the best Vue.js plugins to supercharge your applications. Curated by ",
+          "url": "https://www.vue-plugins.org",
+          "logo": "/logos/vue-plugins.org.ico"
+        },
+        {
+          "name": "Vue",
+          "desc": "Vue.js - 渐进式的 JavaScript 框架",
+          "url": "https://staging-cn.vuejs.org/guide/introduction.html",
+          "logo": "/logos/staging-cn.vuejs.org.svg"
+        },
+        {
+          "name": "前端进阶之旅",
+          "desc": "本文系统梳理了前端高频面试题基础知识，涵盖HTML、HTTP、Web综合问题及SEO优化实战，助力开发者高效备考",
+          "url": "https://interview.poetries.top/docs/base.html",
+          "logo": "/logos/interview.poetries.top.ico"
+        },
+        {
+          "name": "Vue-amap",
+          "desc": "初始化vue-amap组件，提供完整导入和自动按需导入功能，自动导入功能将提供自动的tree-shaking",
+          "url": "https://vue-amap.guyixi.cn/zh-cn/introduction/init.html",
+          "logo": "/logos/vue-amap.guyixi.cn.ico"
+        },
+        {
+          "name": "Axios",
+          "desc": "Documentation for the axios HTTP project",
+          "url": "https://axios-http.com/zh/docs/intro"
+        },
+        {
+          "name": "ESLint",
+          "desc": "插件化、可配置的 JavaScript 代码检查工具，让你轻松地提高代码质量。",
+          "url": "https://cn.eslint.org/docs/rules"
+        },
+        {
+          "name": "Prisma",
+          "desc": "Create a Prisma ORM app, create a Prisma Postgres database, initialize it, and run your fi",
+          "url": "https://www.prisma.io/docs/getting-started/quickstart",
+          "logo": "/logos/prisma.io.ico"
+        },
+        {
+          "name": "西瓜播放器",
+          "desc": "西瓜播放器",
+          "url": "https://v2.h5player.bytedance.com/gettingStarted/"
+        },
+        {
+          "name": "UnoCSS",
+          "desc": "The instant on-demand Atomic CSS engine",
+          "url": "https://unocss.dev/",
+          "logo": "/logos/unocss.dev.ico"
+        },
+        {
+          "name": "Tailwind CSS",
+          "desc": "Integrate Tailwind CSS with frameworks like Laravel, SvelteKit, React Router, and SolidJS.",
+          "url": "https://tailwindcss.com/docs/installation",
+          "logo": "/logos/tailwindcss.com.ico"
+        },
+        {
+          "name": "Univer",
+          "desc": "Univer is a full-stack framework for creating, editing, and collaborating on spreadsheets,",
+          "url": "https://univer.ai/en-US",
+          "logo": "/logos/univer.ai.svg"
+        },
+        {
+          "name": "Svelte",
+          "desc": "Overview • Svelte documentation",
+          "url": "https://svelte.dev/docs/svelte/overview",
+          "logo": "/logos/svelte.dev.png"
+        },
+        {
+          "name": "TGideas",
+          "desc": "tgideas.qq.com",
+          "url": "https://tgideas.qq.com/doc/frontend/spec/common/",
+          "logo": "/logos/tgideas.qq.com.ico"
+        },
+        {
+          "name": "know-css",
+          "desc": "You-need-to-know-css,CSS tricks web developers need to know",
+          "url": "https://lhammer.cn/You-need-to-know-css/",
+          "logo": "/logos/lhammer.cn.png"
+        },
+        {
+          "name": "Vue-i18n",
+          "desc": "Internationalization plugin for Vue.js",
+          "url": "https://vue-i18n.intlify.dev",
+          "logo": "/logos/vue-i18n.intlify.dev.png"
+        },
+        {
+          "name": "前端面试之道",
+          "desc": "汪图南的个人博客",
+          "url": "https://wangtunan.github.io/blog/interview/"
+        },
+        {
+          "name": "NProgress.js",
+          "desc": "ricostacruz.com",
+          "url": "https://ricostacruz.com/nprogress",
+          "logo": "/logos/ricostacruz.com.ico"
+        },
+        {
+          "name": "Pnpm",
+          "desc": "安装软件包及其依赖的任何软件包。默认情况下，任何新软件包都被安装为生产依赖项。",
+          "url": "https://pnpm.io/zh/cli/add",
+          "logo": "/logos/pnpm.io.png"
+        },
+        {
+          "name": "TypeScript",
+          "desc": "介绍为了让程序有价值，我们需要能够处理最简单的数据单元：数字，字符串，结构体，布尔值等。TypeScript支持与JavaScript几乎相同的数据类型，此外还提供了实用的枚举类型",
+          "url": "https://typescript.bootcss.com/basic-types.html",
+          "logo": "/logos/typescript.bootcss.com.ico"
+        },
+        {
+          "name": "TypeScript 入门教程",
+          "desc": "从 JavaScript 程序员的角度总结思考，循序渐进的理解 TypeScript",
+          "url": "https://ts.xcatliu.com/",
+          "logo": "/logos/ts.xcatliu.com.png"
+        },
+        {
+          "name": "ES6",
+          "desc": "es6.ruanyifeng.com",
+          "url": "https://es6.ruanyifeng.com/#README",
+          "logo": "/logos/es6.ruanyifeng.com.ico"
+        },
+        {
+          "name": "vue-office",
+          "desc": "更简单的office文件预览",
+          "url": "https://501351981.github.io/vue-office/examples/docs/guide/"
+        },
+        {
+          "name": "Three.js",
+          "desc": "threejs.org",
+          "url": "https://threejs.org",
+          "logo": "/logos/threejs.org.ico"
+        },
+        {
+          "name": "G6",
+          "desc": "A collection of charts made with the Grammar of Graphics",
+          "url": "http://g6-v3-2.antv.vision/zh",
+          "logo": "/logos/g6-v3-2.antv.vision.png"
+        },
+        {
+          "name": "uCharts",
+          "desc": "uCharts跨平台图表库，全端全平台支持的图表库，开箱即用。支持PC、H5、微信小程序、支付宝小程序、百度小程序、头条小程序、飞书小程序、QQ小程序、360小程序、快手小程序、钉",
+          "url": "https://www.ucharts.cn/v2/#/demo/index"
+        },
+        {
+          "name": "FastApi",
+          "desc": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+          "url": "https://fastapi.tiangolo.com/zh/",
+          "logo": "/logos/fastapi.tiangolo.com.png"
+        },
+        {
+          "name": "vfit.js",
+          "desc": "vfit 是一个 Vue 3 的可视化大屏适配方案，支持 FitContainer 组件及 5 种专用方位定位组件，自动缩放与精确定位，完美适配各种屏幕分辨率。",
+          "url": "https://vfit.raychart.cn",
+          "logo": "/logos/vfit.raychart.cn.svg"
+        },
+        {
+          "name": "dnd kit",
+          "desc": "An extensible drag and drop toolkit written in TypeScript. Framework-agnostic core with fi",
+          "url": "https://dndkit.com/overview",
+          "logo": "/logos/dndkit.com.png"
+        },
+        {
+          "name": "skillhub",
+          "desc": "SkillHub 是专为中国用户优化的 AI Skills 社区，SkillHub 精选 Top 50 高质量 AI Skills，经过安全审核与多维度评估，助你发现最实用的 AI",
+          "url": "https://skillhub.tencent.com/",
+          "logo": "/logos/skillhub.tencent.com.png"
+        }
+      ]
+    },
+    {
+      "name": "博客论坛",
+      "items": [
+        {
+          "name": "搬瓦工",
+          "desc": "搬瓦工库存监控页面, 汇总搬瓦工官网所有方案套餐的库存情况（补货/上货），分享最新搬瓦工补货通知。搬瓦工 KVM、搬瓦工 CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工CN2 GI",
+          "url": "https://stock.bwg.net/"
+        },
+        {
+          "name": "国外主机评测",
+          "desc": "主机测评，分享国外VPS、国外云服务器、国外独立服务器的优惠促销信息，详细实测VPS云服务器并公布真实数据，助您全面了解商家背景及售前售后，2012年运作至今，是国内最专业的主机测",
+          "url": "https://www.zhujiceping.com/",
+          "logo": "/logos/zhujiceping.com.png"
+        },
+        {
+          "name": "V2raySSR",
+          "desc": "V2RaySSR综合网仅提供其他作者作品的解释、介绍及汇总（包括SSR/V2ray/Xray及Trojan的搭建、伪装、教程、客户端工具、一键安装脚本、OpenWRT固件），还包括",
+          "url": "https://www.v2rayssr.com/",
+          "logo": "/logos/v2rayssr.com.ico"
+        },
+        {
+          "name": "VPSGO",
+          "desc": "VPS GO，一个关于VPS的博客，致力于VPS、虚拟主机、独立服务器、域名的优惠分享与推荐。包括便宜VPS，VPS推荐，VPS教程，VPS测评，国外VPS，国内VPS，免费VPS",
+          "url": "https://www.vpsgo.com/",
+          "logo": "/logos/vpsgo.com.ico"
+        },
+        {
+          "name": "openos",
+          "desc": "有关服务器, NAS, 黑群晖, 路由器, Linux, 虚拟化的论坛",
+          "url": "https://www.openos.org/",
+          "logo": "/logos/openos.org.ico"
+        },
+        {
+          "name": "恩山无线论坛",
+          "desc": "恩山无线论坛-无线路由器爱好者的乐园",
+          "url": "https://www.right.com.cn/forum/",
+          "logo": "/logos/right.com.cn.ico"
+        },
+        {
+          "name": "Coschina",
+          "desc": "OSCHINA.NET 是面向开发者的开源与 AI 生态社区。我们倡导开源协作，以内容为核心，并以 AI 提升知识的获取与创作效率，围绕智库、造物与交流形成实践闭环，让开发者在同一",
+          "url": "https://www.oschina.net/",
+          "logo": "/logos/oschina.net.ico"
+        },
+        {
+          "name": "CSDN",
+          "desc": "CSDN 前端博客为中国前端技术达人的汇聚地.为您提供各类前端原创博文,是广大IT爱好者收获知识分享经验的技术乐园.",
+          "url": "https://www.csdn.net/nav/web",
+          "logo": "/logos/csdn.net.ico"
+        },
+        {
+          "name": "coursera",
+          "desc": "Learn job-ready skills with online courses, Professional Certificates, Specializations, an",
+          "url": "https://www.coursera.org/",
+          "logo": "/logos/coursera.org.ico"
+        },
+        {
+          "name": "Stackoverflow",
+          "desc": "stackoverflow.com",
+          "url": "https://stackoverflow.com/"
+        },
+        {
+          "name": "知乎",
+          "desc": "知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好的分享知识、经验和见解，找到自己的解答」为品牌使命。知乎凭借认真、专业、",
+          "url": "https://www.zhihu.com/",
+          "logo": "/logos/zhihu.com.ico"
+        },
+        {
+          "name": "码云",
+          "desc": "面向企业提供一站式研发管理解决方案，包括代码管理、项目管理、文档协作、测试管理、CICD、效能度量等多个模块，支持SaaS、私有化等多种部署方式，帮助企业有序规划和管理研发过程，提",
+          "url": "https://gitee.com/",
+          "logo": "/logos/gitee.com.ico"
+        },
+        {
+          "name": "GitHub",
+          "desc": "Join the world's most widely adopted, AI-powered developer platform where millions of deve",
+          "url": "https://github.com/",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "简书",
+          "desc": "简书是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。",
+          "url": "https://www.jianshu.com",
+          "logo": "/logos/jianshu.com.ico"
+        },
+        {
+          "name": "博客园",
+          "desc": "专注于为开发者服务，帮助开发者用代码改变世界",
+          "url": "https://www.cnblogs.com/",
+          "logo": "/logos/cnblogs.com.ico"
+        },
+        {
+          "name": "掘金",
+          "desc": "掘金是面向全球中文开发者的技术内容分享与交流平台。我们通过技术文章、沸点、课程、直播等产品和服务，打造一个激发开发者创作灵感，激励开发者沉淀分享，陪伴开发者成长的综合类技术社区。",
+          "url": "https://juejin.cn",
+          "logo": "/logos/juejin.cn.ico"
+        }
+      ]
+    },
+    {
+      "name": "在线工具",
+      "items": [
+        {
+          "name": "微信红包封面开放平台",
+          "desc": "微信红包封面开放平台，是微信红包面向品牌主开放的封面付费定制平台。在这里，定制方可自主设计封面样式、创建封面故事，付费定制专属的红包封面。",
+          "url": "https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page/index#/",
+          "logo": "/logos/cover.weixin.qq.com.ico"
+        },
+        {
+          "name": "YunGouOS",
+          "desc": "YunGouOS是支付宝和微信官方合作伙伴，服务于个人的正规、安全、稳定、可靠的微信支付个人接口，方便个人用户通过API进行收款。",
+          "url": "https://dwz.cn/q9g3rE0o",
+          "logo": "/logos/dwz.cn.ico"
+        },
+        {
+          "name": "PayPal",
+          "desc": "Transfer money online in seconds with PayPal money transfer. All you need is an email addr",
+          "url": "https://www.paypal.com",
+          "logo": "/logos/paypal.com.ico"
+        },
+        {
+          "name": "IKUUU",
+          "desc": "暂无描述",
+          "url": "https://ikuuu.one"
+        },
+        {
+          "name": "冲浪云",
+          "desc": "暂无描述",
+          "url": "https://surfcloud.dev/"
+        },
+        {
+          "name": "Wolai",
+          "desc": "用 “我来” 搭建一站式协作平台，团队知识库、仪表台、工作流、内部应用、外部网站与个人云端笔记、待办……开箱即用！",
+          "url": "https://www.wolai.com",
+          "logo": "/logos/wolai.com.png"
+        },
+        {
+          "name": "支付宝",
+          "desc": "��ӭ��¼֧������֧����-ȫ�����ȵĶ���������֧��ƽ̨��������Ϊ����û��ṩ��ȫ���ٵĵ���֧��/����֧��/��ȫ֧��/�ֻ",
+          "url": "https://mrchportalweb.alipay.com/user/home.htm#/",
+          "logo": "/logos/mrchportalweb.alipay.com.ico"
+        },
+        {
+          "name": "Staticfile",
+          "desc": "我们的目标是提供这样一个仓库，让它尽可能面收录尤秀的开源库，并免费为之提供CDN 加速服务，时之有更好的访速度和稳定的环境。同时，我们也提供开源库源接入的入口，让所有人都可以提交开",
+          "url": "https://www.staticfile.org"
+        },
+        {
+          "name": "BootCDN",
+          "desc": "Bootstrap 中文网开源项目免费 CDN 加速服务 - 我们致力于为 Bootstrap、jQuery、Angular、Vue.js 一样优秀的开源项目提供稳定、快速、免费的",
+          "url": "https://www.bootcdn.cn",
+          "logo": "/logos/bootcdn.cn.ico"
+        },
+        {
+          "name": "jsDelivr",
+          "desc": "Optimized for JS and ESM delivery from npm and GitHub. Works with all web formats. Serving",
+          "url": "https://www.jsdelivr.com",
+          "logo": "/logos/jsdelivr.com.ico"
+        },
+        {
+          "name": "CDNJS",
+          "desc": "cdnjs is the free, open-source CDN for the web's most popular libraries. JavaScript, CSS, ",
+          "url": "https://cdnjs.com",
+          "logo": "/logos/cdnjs.com.ico"
+        },
+        {
+          "name": "宝塔面板",
+          "desc": "Linux面板,一键部署LNMP/LAMP/网站,数据库,FTP,SSL证书,WAF防火墙,防入侵,支持PHP,Python,Java宝塔linux面板运维人员常用的服务器监控系统",
+          "url": "https://www.bt.cn/download/linux.html",
+          "logo": "/logos/bt.cn.ico"
+        },
+        {
+          "name": "1Panel",
+          "desc": "1Panel 是一款现代化的开源 Linux 服务器运维管理面板，同时也是轻量级的 AI 管理平台。它通过直观的 Web 界面，为用户提供一站式的服务器管理能力。",
+          "url": "https://1panel.cn/",
+          "logo": "/logos/1panel.cn.png"
+        },
+        {
+          "name": "智谱AI开放平台",
+          "desc": "智谱大模型开放平台-新一代国产自主通用AI大模型开放平台，是国内大模型排名前列的大模型网站，研发了多款LLM模型，多模态视觉模型产品，致力于将AI产品技术与行业场景双轮驱动的中国先",
+          "url": "https://open.bigmodel.cn",
+          "logo": "/logos/open.bigmodel.cn.png"
+        },
+        {
+          "name": "Kimi.ai",
+          "desc": "全新 Kimi K3 现已上线：构建可玩的多人与3D游戏，生成咨询级PPT，用 Swarm 智能体集群与 Goal 模式并行执行任务，知识工作更高效。",
+          "url": "https://kimi.moonshot.cn/",
+          "logo": "/logos/kimi.moonshot.cn.ico"
+        },
+        {
+          "name": "DeepSeek",
+          "desc": "Chat with DeepSeek AI.",
+          "url": "https://chat.deepseek.com/",
+          "logo": "/logos/chat.deepseek.com.svg"
+        },
+        {
+          "name": "豆包",
+          "desc": "Seedance 2.0 视频生成模型现已全面接入豆包，现在登录即可免费使用！豆包 是你的 AI 聊天智能对话问答助手，写作文案翻译编程工具。豆包为你答疑解惑，提供灵感，辅助创作，",
+          "url": "https://www.doubao.com/chat/",
+          "logo": "/logos/doubao.com.png"
+        },
+        {
+          "name": "Openai",
+          "desc": "chatgpt.com",
+          "url": "https://chatgpt.com"
+        },
+        {
+          "name": "文心一言",
+          "desc": "百度文心助手，一站式解决复杂问题，激发PC端超级生产力！独有「灵感探索」功能深入剖析问题核心，智能文字创作、图片创作、AI阅读、智能体海量应用启迪无限创意，开启高效智能学习办公新篇",
+          "url": "https://yiyan.baidu.com",
+          "logo": "/logos/yiyan.baidu.com.ico"
+        },
+        {
+          "name": "FrontJS",
+          "desc": "FrontJS 是为广大对网站错误监测有需求的用户和团队所提供的可以快速追踪网站故障，及时修复问题，维护网站质量，指导改善用户体验的轻量级网站错误监控平台。目前除支持监控Web端，",
+          "url": "https://www.frontjs.com"
+        },
+        {
+          "name": "百度统计",
+          "desc": "tongji.baidu.com",
+          "url": "https://tongji.baidu.com/main/homepage/10000390449/homepage/index",
+          "logo": "/logos/tongji.baidu.com.ico"
+        },
+        {
+          "name": "Analytics",
+          "desc": "analytics.google.com",
+          "url": "https://analytics.google.com/analytics/web/#/report-home/a157349190w221495475p210595989"
+        },
+        {
+          "name": "51.LA网站统计V6",
+          "desc": "免费、易用、专业的网站数据统计与营销分析平台，实时监测，精准洞察，专注用户行为分析，助力业务增长，提供更加精准全面的来路统计分析、数据报表可视化、网站分析能力、事件分析和渠道追踪归",
+          "url": "https://v6.51.la/user/application",
+          "logo": "/logos/v6.51.la.ico"
+        },
+        {
+          "name": "Google AdSense",
+          "desc": "With Google AdSense, you can earn money from your online content.",
+          "url": "https://www.google.com/adsense/new/u/0/pub-2599932310715643/sites/list"
+        },
+        {
+          "name": "PageSpeedInsights",
+          "desc": "pagespeed.web.dev",
+          "url": "https://pagespeed.web.dev"
+        },
+        {
+          "name": "Vps234",
+          "desc": "IPChecker是VPS234开发的一款检查IP是否被墙的利器，通过本工具你可以轻松检查IP是否被封，这款工具通过国内国外检查通过TCP、ICMP访问判断IP是否被封，轻松检查I",
+          "url": "https://www.vps234.com/ipchecker",
+          "logo": "/logos/vps234.com.ico"
+        },
+        {
+          "name": "做好图",
+          "desc": "在线文档转换",
+          "url": "http://www.zuohaotu.com",
+          "logo": "/logos/zuohaotu.com.ico"
+        },
+        {
+          "name": "caniuse",
+          "desc": "\"Can I use\" provides up-to-date browser support tables for support of front-end web techno",
+          "url": "https://caniuse.com",
+          "logo": "/logos/caniuse.com.png"
+        },
+        {
+          "name": "Fast-Mock",
+          "desc": "fastmock可以让你在没有后端程序的情况下能真实地在线模拟ajax请求，你可以用fatmock实现项目初期纯前端的效果演示，也可以用fastmock实现开发中的数据模拟从而实现",
+          "url": "https://www.fastmock.site/#/login",
+          "logo": "/logos/fastmock.site.png"
+        },
+        {
+          "name": "CSS Sprites",
+          "desc": "toptal.com",
+          "url": "https://www.toptal.com/developers/css/sprite-generator"
+        },
+        {
+          "name": "NPM",
+          "desc": "npmjs.com",
+          "url": "https://www.npmjs.com"
+        },
+        {
+          "name": "SOJSON",
+          "desc": "SO JSON在线提供在线JSON解析，可以把JSON内容或JSON文件进行格式化解析，按JSON层级展现。当JSON格式出现问题，采用中文的方式提醒JSON错误内容，以及标记JS",
+          "url": "https://www.sojson.com"
+        },
+        {
+          "name": "在线工具",
+          "desc": "在线工具,开发人员工具,代码格式化、压缩、加密、解密,下载链接转换,json格式化,正则测试工具,favicon在线制作,字帖工具,中文简繁体转换,迅雷下载链接转换,进制转换,二维",
+          "url": "https://tool.lu",
+          "logo": "/logos/tool.lu.ico"
+        },
+        {
+          "name": "M3U8在线播放器",
+          "desc": "免费在线 M3U8 播放器，支持 HLS 直播与点播、MP4、WebM 及本地视频，提供字幕、倍速和画中画功能。可在浏览器保存在线播放历史与点播进度，本地视频和字幕文件无需上传。",
+          "url": "https://m3u8-player.com/",
+          "logo": "/logos/m3u8-player.com.ico"
+        },
+        {
+          "name": "有道云笔记",
+          "desc": "TODO",
+          "url": "https://note.youdao.com/web/#/file/recent/markdown/WEB80575f5bd4619671a7ad032db131fd6b"
+        },
+        {
+          "name": "语雀",
+          "desc": "十万阿里人都在用的笔记与文档知识库，面向企业、组织或个人，提供全新的体系化知识管理，打造轻松流畅的工作协同。金融级数据安全、丰富的应用场景、强大的知识创作与管理，助力企业、个人轻松",
+          "url": "https://www.yuque.com/dashboard",
+          "logo": "/logos/yuque.com.png"
+        },
+        {
+          "name": "CodeFun",
+          "desc": "ide.code.fun",
+          "url": "https://ide.code.fun/userConsole",
+          "logo": "/logos/ide.code.fun.png"
+        },
+        {
+          "name": "墨刀",
+          "desc": "modao.cc",
+          "url": "https://modao.cc/app/j6v57qJCr4x5btGDnAUA8C#screen=sl0246qj8l9mig1",
+          "logo": "/logos/modao.cc.ico"
+        },
+        {
+          "name": "Figma",
+          "desc": "Figma is the canvas where design, code, and AI come together. From first idea to shipped p",
+          "url": "https://www.figma.com",
+          "logo": "/logos/figma.com.ico"
+        },
+        {
+          "name": "蓝湖",
+          "desc": "蓝湖是一款产品文档和设计图的共享平台，帮助互联网团队更好地管理文档和设计图。蓝湖可以在线展示Axure，自动生成设计图标注，与团队共享设计图，展示页面之间的跳转关系。蓝湖支持从Sk",
+          "url": "https://lanhuapp.com/",
+          "logo": "/logos/lanhuapp.com.ico"
+        },
+        {
+          "name": "GitBook",
+          "desc": "GitBook is a knowledge platform that connects your docs, product and users, answers user q",
+          "url": "https://www.gitbook.com/"
+        },
+        {
+          "name": "FreeSSL.cn",
+          "desc": "Let's Encrypt证书,TrustAsia证书,HTTPS免费证书,SSL免费证书,服务器证书,Free SSL,Free HTTPS,.app 域名,.app免费证书",
+          "url": "https://FreeSSL.cn/",
+          "logo": "/logos/freessl.cn.ico"
+        },
+        {
+          "name": "测速网",
+          "desc": "测速网（SpeedTest.cn）提供网速测试，网络质量测试，宽带测速，Wi-Fi测速，5G测速，IPv6测速，带宽检测，路由器测速，网关测速，宽带提速，宽带升级，网络加速，内网测",
+          "url": "https://www.speedtest.cn/"
+        },
+        {
+          "name": "BOCE",
+          "desc": "通过该工具可以多个地点Ping服务器以检测服务器响应速度。",
+          "url": "https://ping.chinaz.com"
+        },
+        {
+          "name": "压缩图",
+          "desc": "压缩图是一款在线无损图片压缩工具，能够将jpg/png/gif等格式无损压缩90%，同时支持将图片精准压缩到20k/100k等指定大小以满足考试报名需求，提供图片尺寸修改、批量修改",
+          "url": "https://www.yasuotu.com/",
+          "logo": "/logos/yasuotu.com.ico"
+        },
+        {
+          "name": "docsmall",
+          "desc": "docsmall 提供免费的在线图片、GIF、PDF处理，包括图片压缩、裁剪、改尺寸，PDF合并、分割、压缩、页面调整等功能。",
+          "url": "https://docsmall.com/",
+          "logo": "/logos/docsmall.com.png"
+        },
+        {
+          "name": "图片压缩",
+          "desc": "图片压缩器是字客网提供缩小图片尺寸的在线工具，即可有损压缩又可无损压缩，实现图片减肥瘦身的目的。您只需上传想要压缩的图片，该工具会生成删除了冗余信息而画质不变的图片。",
+          "url": "https://www.fontke.com/tool/compressimage/",
+          "logo": "/logos/fontke.com.ico"
+        },
+        {
+          "name": "TinyPNG",
+          "desc": "Free online image optimizer for faster websites! Reduce the file size of your AVIF, WEBP, ",
+          "url": "https://tinypng.com/",
+          "logo": "/logos/tinypng.com.png"
+        },
+        {
+          "name": "屏幕尺寸大全",
+          "desc": "全球优秀的知名设计网址导航为设计师提供ps教程、UI设计、素材下载、高清图库、配色方案、用户体验、网页设计等全方位设计师网站导航指引。最实用、最专业、最全面、最好用的设计师导航！",
+          "url": "https://www.ubuuk.com/screen"
+        },
+        {
+          "name": "搜狗SEO",
+          "desc": "zhanzhang.sogou.com",
+          "url": "https://zhanzhang.sogou.com/index.php/sitelink/index",
+          "logo": "/logos/zhanzhang.sogou.com.ico"
+        },
+        {
+          "name": "360站长平台",
+          "desc": "zhanzhang.so.com",
+          "url": "https://zhanzhang.so.com/sitetool/includenum",
+          "logo": "/logos/zhanzhang.so.com.png"
+        },
+        {
+          "name": "百度搜索资源平台",
+          "desc": "普通收录工具可实时向百度推送数据，创建并提交sitemap及提交未收录网页链接有助于百度发现并了解您网站上的网页和网站结构，加快抓取。",
+          "url": "https://ziyuan.baidu.com/linksubmit/index",
+          "logo": "/logos/ziyuan.baidu.com.ico"
+        },
+        {
+          "name": "svga",
+          "desc": "SVGA是一种同时兼容iOS/Android/Flutter/Web/HarmonyOS多个平台的动画格式，提供高性能动画播放体验。",
+          "url": "https://svga.dev/svga-preview.html#google_vignette",
+          "logo": "/logos/svga.dev.ico"
+        },
+        {
+          "name": "XDOC文档预览服务",
+          "desc": "移动端和PC端无插件直接预览PDF、OFD、Word、WPS等多种文档",
+          "url": "https://view.xdocin.com/",
+          "logo": "/logos/view.xdocin.com.ico"
+        },
+        {
+          "name": "Google Fonts",
+          "desc": "Making the web more beautiful, fast, and open through great typography",
+          "url": "https://fonts.google.com/"
+        },
+        {
+          "name": "虚拟号码在线接收短信",
+          "desc": "Buy virtual number for SMS verification from 0.014$. Receive SMS online and bypass SMS in ",
+          "url": "https://5sim.net",
+          "logo": "/logos/5sim.net.ico"
+        }
+      ]
+    },
+    {
+      "name": "字体转换",
+      "items": [
+        {
+          "name": "TMKOO",
+          "desc": "标库网（tmkoo.com）实时同步商标局数据，提供免费商标近似查询、商标状态查询、商标公告检索，一站式办理商标注册、商标转让等知识产权服务。",
+          "url": "https://www.tmkoo.com",
+          "logo": "/logos/tmkoo.com.ico"
+        },
+        {
+          "name": "二郎查",
+          "desc": "最新二类电商爆品数据查询工具，能够了解行业最新爆品信息，有助于更好选品决策。查爆品上二郎查！",
+          "url": "https://www.erlangcha.com/",
+          "logo": "/logos/erlangcha.com.ico"
+        },
+        {
+          "name": "BigBigAds",
+          "desc": "BigBigAds（又名头条广告情报）是为广告主和广告优化师提供文案创意、手游买量、二类电商选品等广告投放分析的专业广告监测系统，目前已覆盖国内20+主流媒体渠道，累计抓取约180",
+          "url": "https://bigbigads.io/",
+          "logo": "/logos/bigbigads.io.png"
+        },
+        {
+          "name": "FeedsRadar",
+          "desc": "信息流雷达是为广告主、媒体、运营优化师、营销商务提供一站式信息流广告解决方案的工具，通过分析广告热度、广告排行、媒体排行、竞品广告动态等，帮助您快速有效优化广告投放，及时了解广告市",
+          "url": "http://ad1024.com/"
+        },
+        {
+          "name": "Appgrowing",
+          "desc": "data.appgrowing.cn",
+          "url": "https://data.appgrowing.cn/leaflet/list"
+        },
+        {
+          "name": "巨量引擎",
+          "desc": "巨量引擎方舟是巨量引擎为渠道合作伙伴打造的集公司签约、客户跟进、商务流程、优化投放、智能数据BI分析等业务于一体的伙伴合作平台。巨量引擎方舟不仅适用于公司管理层与一线同学，还包括其",
+          "url": "https://agent.oceanengine.com/"
+        },
+        {
+          "name": "巨量引擎",
+          "desc": "巨量引擎广告投放平台是抖音集团旗下的一站式营销服务平台，覆盖今日头条、抖音、西瓜视频、抖音火山版、懂车帝、穿山甲等产品数亿优质用户，推广定向精准、按效果计费，帮您高效达成营销推广目",
+          "url": "https://ad.oceanengine.com/pages/login/index.html",
+          "logo": "/logos/ad.oceanengine.com.svg"
+        },
+        {
+          "name": "谷歌地图",
+          "desc": "在 Google 地图上查找本地商户、查看卫星地图、查询公交和驾车路线。",
+          "url": "https://www.google.com/maps/@35.274241,160.2981017,3z?hl=zh-CN"
+        },
+        {
+          "name": "高德地图",
+          "desc": "高德地图官方网站，提供全国地图浏览，地点搜索，公交驾车查询服务。可同时查看商家团购、优惠信息。高德地图，您的出行、生活好帮手。",
+          "url": "https://www.amap.com/",
+          "logo": "/logos/amap.com.ico"
+        },
+        {
+          "name": "同花顺财经",
+          "desc": "核新同花顺网络信息股份有限公司（同花顺）成立于1995年，是一家专业的互联网金融数据服务商，为您全方位提供财经资讯及全球金融市场行情，覆盖股票、基金、期货、外汇、债券、银行、黄金等",
+          "url": "http://www.10jqka.com.cn/",
+          "logo": "/logos/10jqka.com.cn.png"
+        },
+        {
+          "name": "chrome 网上应用店",
+          "desc": "使用 Chrome 应用商店中的主题自定义您的浏览器。",
+          "url": "https://chrome.google.com/webstore/category/themes?hl=zh-CN"
+        },
+        {
+          "name": "草料二维码",
+          "desc": "一站式二维码生成工具，免费可用。提供编码解码、数据统计、富文本和多媒体展示、表单制作、美化标签、批量管理等功能，并可作为无代码平台，搭建二维码信息系统。",
+          "url": "https://cli.im/",
+          "logo": "/logos/cli.im.ico"
+        },
+        {
+          "name": "身份信息生成",
+          "desc": "免费在线生成美国虚拟身份信息，含姓名、地址、电话、SSN、信用卡、职业等完整资料，支持按州和性别自定义筛选。",
+          "url": "https://www.ssnzk.com",
+          "logo": "/logos/ssnzk.com.png"
+        },
+        {
+          "name": "Google Voice",
+          "desc": "Learn how Google Voice provides flexible online phone numbers and systems that help busine",
+          "url": "https://voice.google.com/"
+        },
+        {
+          "name": "Time",
+          "desc": "7,000,000 个地区，59 种语言，与原子钟同步运行。",
+          "url": "https://time.is/zh/",
+          "logo": "/logos/time.is.png"
+        },
+        {
+          "name": "APKPure",
+          "desc": "apkpure.com",
+          "url": "https://apkpure.com/cn/"
+        },
+        {
+          "name": "WeiboDang",
+          "desc": "微博视频下载,推特视频下载,Twitter视频下载,爱奇艺视频下载,抖音视频下载,腾讯视频下载,音悦台视频下载,优酷视频下载,油管视频下载,Youtube视频下载,微信视频下载,搜",
+          "url": "http://weibodang.cn/videoextractor/",
+          "logo": "/logos/weibodang.cn.ico"
+        },
+        {
+          "name": "视频下载",
+          "desc": "在線下載Youtube視頻音頻和字幕，無需安裝客戶端。超多格式支持，720p,1080p。mp4，mp3。|Download youtube videos， audios and ",
+          "url": "https://addyoutube.com",
+          "logo": "/logos/addyoutube.com.ico"
+        },
+        {
+          "name": "直播解析",
+          "desc": "dspjx.com",
+          "url": "http://www.dspjx.com/zhibo/index.php"
+        },
+        {
+          "name": "抖音解析",
+          "desc": "vtool解析网是专业的素材在线解析工具，提供抖音视频下载、抖音去水印、小红书视频下载、小红书去水印、小红书图片下载、小红书文案复制、快手视频下载、快手去水印、tiktok 视频去",
+          "url": "https://vtool.pro/",
+          "logo": "/logos/vtool.pro.ico"
+        },
+        {
+          "name": "下载狗",
+          "desc": "下载狗工具支持全网100+主流网站视频无水印下载!电脑，平板，手机都可以在线使用，帮助我们解决问题。",
+          "url": "https://www.xiazaitool.com/",
+          "logo": "/logos/xiazaitool.com.png"
+        },
+        {
+          "name": "短视频解析",
+          "desc": "微视短视频在线解析下载工具支持将腾讯微视软件里的视频去水印下载保存到手机相册,解析出来的视频没有水印,手机、平板、电脑上都可以用的辅助下载工具.",
+          "url": "https://weishi.iiilab.com",
+          "logo": "/logos/weishi.iiilab.com.ico"
+        },
+        {
+          "name": "广州政务服务网",
+          "desc": "gdzwfw.gov.cn",
+          "url": "http://www.gdzwfw.gov.cn/"
+        },
+        {
+          "name": "天眼查",
+          "desc": "天眼查专注服务于个人与企业信息查询,都在用的商业查询平台,为您提供公司查询,工商信息查询,企业查询,工商查询,企业信用信息查询等相关信息",
+          "url": "https://www.tianyancha.com/",
+          "logo": "/logos/tianyancha.com.ico"
+        },
+        {
+          "name": "BOSS直聘",
+          "desc": "BOSS直聘广州招聘网站，为求职者提供海量2026年10月17日最新广州人才招聘信息。BOSS直聘广州招聘网让求职者与Boss直接开聊、加快面试、即时反馈，找工作就来BOSS直聘和",
+          "url": "https://www.zhipin.com/guangzhou/",
+          "logo": "/logos/zhipin.com.ico"
+        },
+        {
+          "name": "前程无忧",
+          "desc": "前程无忧人才网面向全国,提供2026准确的招聘网站信息,为企业和求职者提供人才招聘、求职、找工作、培训等在内的全方位的人力资源服务,更多求职找工作信息尽在前程无忧!",
+          "url": "https://www.51job.com/",
+          "logo": "/logos/51job.com.ico"
+        },
+        {
+          "name": "微信视频号助手",
+          "desc": "视频号助手是微信为视频号创作者提供内容上传管理、数据查询等功能的专属服务平台。",
+          "url": "https://channels.weixin.qq.com/login.html",
+          "logo": "/logos/channels.weixin.qq.com.png"
+        },
+        {
+          "name": "谷歌邮箱",
+          "desc": "Gmail is email that’s intuitive, efficient, and useful. 15 GB of storage, less spam, and m",
+          "url": "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
+          "name": "QQ邮箱",
+          "desc": "QQ邮箱，提供qq.com、foxmail.com后缀的安全、稳定、快速、便捷的免费电子邮箱。强大的反垃圾邮件过滤，10G超大附件发送，便捷记事和日历功能，轻松管理所有电子发票，尽",
+          "url": "https://mail.qq.com",
+          "logo": "/logos/mail.qq.com.ico"
+        },
+        {
+          "name": "腾讯企业邮",
+          "desc": "��¼��Ѷ��ҵ����,����д�����ʼ���ַ,�����Ա�˺�,֧��΢��ɨһɨ��¼�����°�Foxmail,��������,�����շ�",
+          "url": "https://exmail.qq.com/login",
+          "logo": "/logos/exmail.qq.com.ico"
+        },
+        {
+          "name": "163邮箱",
+          "desc": "网易163免费邮箱，你的专业电子邮局，注册用户数超10亿，专业稳定安全。网易邮箱官方App“邮箱大师”帮您高效处理邮件，支持所有邮箱，并可在手机、Windows和Mac上多端协同使",
+          "url": "https://mail.163.com",
+          "logo": "/logos/mail.163.com.png"
+        },
+        {
+          "name": "395公章",
+          "desc": "暂无描述",
+          "url": "http://www.395.net.cn"
+        },
+        {
+          "name": "Convertio",
+          "desc": "Convertio - 在线转换文件的简单工具。支持超过309种不同的文档、图像、电子表格、电子书、文档、演示文稿、音频和视频格式。",
+          "url": "https://convertio.co/zh",
+          "logo": "/logos/convertio.co.ico"
+        },
+        {
+          "name": "字体天下",
+          "desc": "字体天下提供中文字体、手写字体、英文字体、图形字体等各种字体的高速免费下载和在线预览服务.",
+          "url": "http://www.fonts.net.cn",
+          "logo": "/logos/fonts.net.cn.png"
+        },
+        {
+          "name": "求字体",
+          "desc": "求字体网(www.qiuziti.com)是专注于字体识别、发现与下载的字体网站，支持中、英、日、韩等多国语言图片识别字体，提供海量免费字体下载及书法字体、艺术字体、手写字体在线预",
+          "url": "http://www.qiuziti.com",
+          "logo": "/logos/qiuziti.com.ico"
+        },
+        {
+          "name": "Magic Eraser",
+          "desc": "最好用的免费 AI 图片去水印在线工具。支持无损移除图像中的水印、Logo、文字及人物，保持 1:1 原图分辨率，免登录，支持 HEIC/WEBP 格式。",
+          "url": "https://magiceraser.org/zh/remove-watermark-from-image/",
+          "logo": "/logos/magiceraser.org.ico"
+        },
+        {
+          "name": "EzRemove",
+          "desc": "使用AI去除水印工具，仅需数秒即可免费去除照片中的水印。无需注册、无广告、无损画质。上传并下载，就是如此简单。",
+          "url": "https://ezremove.ai/zh/watermark-remover/",
+          "logo": "/logos/ezremove.ai.ico"
+        }
+      ]
+    },
+    {
+      "name": "影音娱乐",
+      "items": [
+        {
+          "name": "吹水台",
+          "desc": "集合分台最新資訊，網羅線上最潮熱話，全港市民最關注議題一覽無遺。吹水台亦歡迎網民分享生活點滴或忽發奇想，眾多抵死笑料全部集中在高登吹水台。",
+          "url": "https://forum.hkgolden.com/channel/BW"
+        },
+        {
+          "name": "Dcard",
+          "desc": "dcard.tw",
+          "url": "https://www.dcard.tw/f"
+        },
+        {
+          "name": "小米有品",
+          "desc": "小米有品是小米旗下新生活方式电商，致力于成为新中产优选的精品电商平台。有品坚持依从小米产品观进行选品及育品，为用户提供具备高品质、高颜值、科技感的好产品，为生活提供全场景解决方案。",
+          "url": "https://www.xiaomiyoupin.com/"
+        },
+        {
+          "name": "Apple",
+          "desc": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac,",
+          "url": "https://www.apple.com/",
+          "logo": "/logos/apple.com.ico"
+        },
+        {
+          "name": "小米商城",
+          "desc": "让全球每个人都能享受科技带来的美好生活",
+          "url": "https://www.mi.com/",
+          "logo": "/logos/mi.com.ico"
+        },
+        {
+          "name": "亚马逊商城",
+          "desc": "amazon.com",
+          "url": "https://www.amazon.com",
+          "logo": "/logos/amazon.com.ico"
+        },
+        {
+          "name": "京东",
+          "desc": "京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜",
+          "url": "https://www.jd.com",
+          "logo": "/logos/jd.com.ico"
+        },
+        {
+          "name": "淘宝",
+          "desc": "淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补",
+          "url": "https://www.taobao.com/",
+          "logo": "/logos/taobao.com.ico"
+        },
+        {
+          "name": "懒人听书",
+          "desc": "懒人听书提供海量有声小说、广播剧、相声评书、儿童故事和音乐电台，发现热门好书并在线收听。",
+          "url": "https://www.lrts.me/",
+          "logo": "/logos/lrts.me.ico"
+        },
+        {
+          "name": "喜马拉雅",
+          "desc": "国内专业音频分享平台，随时随地，听我想听！4亿用户选择的在线音频平台。马东、郭德纲、吴晓波等20多万大咖入驻，1亿多条原创有声内容覆盖有声书、儿童、相声评书、财经新闻、音乐等328",
+          "url": "https://www.ximalaya.com",
+          "logo": "/logos/ximalaya.com.ico"
+        },
+        {
+          "name": "酷狗音乐",
+          "desc": "酷狗音乐在线正版音乐网站，为您提供酷狗音乐播放器下载 、在线音乐试听下载，提供听书、长音频、频道、听小说和MV播放服务。酷狗音乐，就是歌多！小说相声也很多！场景音乐也很多！",
+          "url": "http://www.kugou.com/",
+          "logo": "/logos/kugou.com.ico"
+        },
+        {
+          "name": "QQ音乐",
+          "desc": "QQ音乐是腾讯公司推出的一款网络音乐服务产品，海量音乐在线试听、新歌热歌在线首发、歌词翻译、手机铃声下载、高品质无损音乐试听、海量无损曲库、正版音乐下载、空间背景音乐设置、MV观看",
+          "url": "https://y.qq.com/",
+          "logo": "/logos/y.qq.com.ico"
+        },
+        {
+          "name": "网易云音乐",
+          "desc": "网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。",
+          "url": "https://music.163.com",
+          "logo": "/logos/music.163.com.ico"
+        },
+        {
+          "name": "Twitter",
+          "desc": "twitter.com",
+          "url": "https://twitter.com/home"
+        },
+        {
+          "name": "Facebook",
+          "desc": "facebook.com",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "name": "新浪",
+          "desc": "weibo.com",
+          "url": "https://www.weibo.com/login.php",
+          "logo": "/logos/weibo.com.ico"
+        },
+        {
+          "name": "头条号",
+          "desc": "mp.toutiao.com",
+          "url": "https://mp.toutiao.com/profile_v3/xigua"
+        },
+        {
+          "name": "小红书",
+          "desc": "在小红书，分享照片和视频，分享购物心得，记录生活故事，和最会生活的人做朋友。",
+          "url": "https://www.xiaohongshu.com",
+          "logo": "/logos/xiaohongshu.com.ico"
+        },
+        {
+          "name": "爱漫展",
+          "desc": "爱漫展网为所有喜欢去动漫展玩的小伙伴们提供漫展时间表,漫展地点以及漫展内容,希望大家都能在漫展里找到自己喜爱的CP.",
+          "url": "https://www.aimanzhan.com",
+          "logo": "/logos/aimanzhan.com.png"
+        },
+        {
+          "name": "虎牙",
+          "desc": "虎牙直播是以游戏直播为主的弹幕式互动直播平台，累计注册用户2亿，提供热门游戏直播、电竞赛事直播与游戏赛事直播，手游直播等。包含英雄联盟lol，王者荣耀，绝地求生，和平精英等游戏直播",
+          "url": "https://www.huya.com/",
+          "logo": "/logos/huya.com.png"
+        },
+        {
+          "name": "斗鱼",
+          "desc": "斗鱼 - 看见每种热爱 提供高清、快捷、流畅的视频直播和游戏赛事直播服务，包含英雄联盟lol直播、穿越火线cf直播、dota2直播、美女直播等各类热门游戏赛事直播和各种名家大神游戏",
+          "url": "https://www.douyu.com/",
+          "logo": "/logos/douyu.com.ico"
+        },
+        {
+          "name": "飘花资源网",
+          "desc": "飘花电影网－最新电影,3E迅雷电影下载网(原3edyy.com)-每天搜集最新迅雷免费电影下载。为使用迅雷软件的用户提供最新的免费电影下载、小电影下载、高清电影下载等服务。",
+          "url": "https://www.piaohua.com/"
+        },
+        {
+          "name": "AGE动漫",
+          "desc": "agedm.org",
+          "url": "https://www.agedm.org"
+        },
+        {
+          "name": "nicovideo",
+          "desc": "日本最大級の動画サービス、ニコニコ（niconico）。動画にコメントを付けて楽しむニコニコ動画や、生放送番組にリアルタイムでコメントを付けられるニコニコ生放送のほか、イラスト・マ",
+          "url": "https://www.nicovideo.jp/"
+        },
+        {
+          "name": "AbemaTV",
+          "desc": "ABEMAは好きな時間に好きな場所で話題の動画を無料で楽しめる新しい未来のテレビ。ニュースや恋愛番組、アニメ、スポーツなど、多彩な番組をお楽しみいただけます。©AbemaTV, I",
+          "url": "https://abema.tv/"
+        },
+        {
+          "name": "动漫疯",
+          "desc": "動畫瘋是由巴哈姆特所推出，正版授權的免費動畫平台，提供與日本同步的當季新番動畫，並含有高達上萬集的過往名作，供動畫迷們自由選擇！",
+          "url": "https://ani.gamer.com.tw/"
+        },
+        {
+          "name": "myTVsuper",
+          "desc": "探索myTV SUPER網頁版極致娛樂！免費區線上看TVB劇集及綜藝娛樂節目重溫、電視直播、節目表、中外電影猛片、賽馬一應俱全，升級myTV Gold享受更多功能和體驗！",
+          "url": "https://www.mytvsuper.com/",
+          "logo": "/logos/mytvsuper.com.png"
+        },
+        {
+          "name": "Disney+",
+          "desc": "Access your favorite entertainment with Disney+. Disney+ is the streaming home for Disney,",
+          "url": "https://www.disneyplus.com/",
+          "logo": "/logos/disneyplus.com.ico"
+        },
+        {
+          "name": "HBO",
+          "desc": "The official site for HBO, discover full episodes of original series, movies, schedule inf",
+          "url": "https://www.hbo.com/"
+        },
+        {
+          "name": "Hulu",
+          "desc": "Watch TV shows and movies online. Stream TV episodes of Shōgun, Grey's Anatomy, This Is Us",
+          "url": "https://www.hulu.com/",
+          "logo": "/logos/hulu.com.png"
+        },
+        {
+          "name": "Netflix",
+          "desc": "Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC,",
+          "url": "https://www.netflix.com/"
+        },
+        {
+          "name": "YouTube",
+          "desc": "YouTube 上盡享你喜愛的影片和音樂、上載原創內容，並與親友和世界各地的人分享。",
+          "url": "https://www.youtube.com/"
+        },
+        {
+          "name": "哔哩哔哩",
+          "desc": "哔哩哔哩（bilibili.com)是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。大家可以在这里找到许多欢乐。",
+          "url": "https://www.bilibili.com/",
+          "logo": "/logos/bilibili.com.ico"
+        },
+        {
+          "name": "腾讯视频",
+          "desc": "腾讯视频官方网站，腾讯视频提供最新热门电视剧、电影、综艺、动漫、纪录片等高清正版视频在线观看。海量独家内容持续更新，涵盖国产剧、美剧、韩剧、院线大片、热门综艺，支持超清流畅播放，尽",
+          "url": "https://v.qq.com/",
+          "logo": "/logos/v.qq.com.ico"
+        },
+        {
+          "name": "爱奇艺",
+          "desc": "爱奇艺（iQIYI）是中国领先的在线视频平台，提供海量免费正版高清电视剧、短剧、电影、综艺、动漫等视频内容，成功打造了狂飙、新说唱、偶像练习生、我是刑警、迷雾剧场等现象级IP，热门",
+          "url": "https://www.iqiyi.com/",
+          "logo": "/logos/iqiyi.com.ico"
+        },
+        {
+          "name": "优酷",
+          "desc": "视频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
+          "url": "https://www.youku.com/",
+          "logo": "/logos/youku.com.ico"
+        }
+      ]
+    },
+    {
+      "name": "云服务器",
+      "items": [
+        {
+          "name": "Cloudflare",
+          "desc": "dash.cloudflare.com",
+          "url": "https://dash.cloudflare.com/",
+          "logo": "/logos/dash.cloudflare.com.png"
+        },
+        {
+          "name": "七牛云",
+          "desc": "portal.qiniu.com",
+          "url": "https://portal.qiniu.com/create",
+          "logo": "/logos/portal.qiniu.com.ico"
+        },
+        {
+          "name": "Namecheap",
+          "desc": "namecheap.com",
+          "url": "https://www.namecheap.com/"
+        },
+        {
+          "name": "LeanCloud",
+          "desc": "console.leancloud.cn",
+          "url": "https://console.leancloud.cn/apps/Ho5r0OHccXl2EpUYOgHSGbAS-gzGzoHsz/",
+          "logo": "/logos/console.leancloud.cn.ico"
+        },
+        {
+          "name": "阿里云-云效",
+          "desc": "欢迎登录阿里云，全球领先的云计算及人工智能科技公司，阿里云为200多个国家和地区的企业、开发者和政府机构提供云计算基础服务及解决方案。阿里云云计算、安全、大数据、人工智能、企业应用",
+          "url": "https://devops.aliyun.com/workbench?orgId=5f82d6e53035265285848550",
+          "logo": "/logos/devops.aliyun.com.png"
+        },
+        {
+          "name": "宝塔服务器-香港",
+          "desc": "暂无描述",
+          "url": "http://193.134.211.156:8888/fc16b947"
+        },
+        {
+          "name": "六六云",
+          "desc": "港/日/韩/美/英/德/菲七大地区,双ISP原生住宅IP,CN2 GIA·9929·4837 精品回程线路,秒级开通,可视化控制台。",
+          "url": "https://666clouds.com/aff.php?aff=43",
+          "logo": "/logos/666clouds.com.ico"
+        },
+        {
+          "name": "DMIT",
+          "desc": "dmit.io",
+          "url": "https://www.dmit.io/aff.php?aff=1001"
+        },
+        {
+          "name": "HostKvm",
+          "desc": "香港雲伺服器、實體主機、專屬伺服器租用",
+          "url": "https://my.hostkvm.com/aff.php?aff=886",
+          "logo": "/logos/my.hostkvm.com.ico"
+        },
+        {
+          "name": "搬瓦工",
+          "desc": "Inexpensive VPS hosting on premium hardware with RAID-10 SAS disks and E5 CPUs. Premium Gi",
+          "url": "https://bandwagonhost.com/aff.php?aff=64358"
+        },
+        {
+          "name": "Vultr",
+          "desc": "Vultr Global Cloud Hosting - Brilliantly Fast SSD VPS Cloud Servers. 100% KVM Virtualizati",
+          "url": "https://www.vultr.com/?ref=8439176-6G"
+        },
+        {
+          "name": "UCloud",
+          "desc": "passport.ucloud.cn",
+          "url": "https://passport.ucloud.cn/?invitation_code=C1xB99F99EE6CCE",
+          "logo": "/logos/passport.ucloud.cn.ico"
+        },
+        {
+          "name": "亚马逊云",
+          "desc": "Amazon Web Services 提供的云计算服务可靠、可扩展且费用合理。免费加入，只需按使用量付费。",
+          "url": "https://aws.amazon.com",
+          "logo": "/logos/aws.amazon.com.png"
+        },
+        {
+          "name": "微软云",
+          "desc": "portal.azure.com",
+          "url": "https://portal.azure.com/"
+        },
+        {
+          "name": "谷歌云",
+          "desc": "借助 Google 的 AI 和云计算服务，包括安全、数据管理、混合云和多云方面的服务，着力应对业务挑战。",
+          "url": "https://cloud.google.com/?hl=zh-CN"
+        },
+        {
+          "name": "阿里云",
+          "desc": "阿里云是全球领先的云计算及人工智能科技公司，在全球范围内提供可扩展，安全和可靠的云计算服务。提供免费试用，支持按量付费，助力企业数字化转型。",
+          "url": "https://www.alibabacloud.com/",
+          "logo": "/logos/alibabacloud.com.ico"
+        },
+        {
+          "name": "西部数据",
+          "desc": "���������Ǵ���2002��������Ƽ�������̡�רҵ�ṩ�Ʒ���������������������ע�ᡢ��ҵ�����,50��������������",
+          "url": "https://www.west.cn/",
+          "logo": "/logos/west.cn.png"
+        },
+        {
+          "name": "腾讯云",
+          "desc": "腾讯云活动汇聚了腾讯云最新的促销打折、优惠折扣等信息，你在这里可以找到云服务器、域名、数据库、小程序等等多种不同产品的促销活动，还有各种产品的免费试用哦。",
+          "url": "https://curl.qcloud.com/7o3qLfdm"
+        },
+        {
+          "name": "阿里云",
+          "desc": "上云优惠聚集地，专享优惠价格，可叠加优惠券购买价格更低。",
+          "url": "https://www.aliyun.com/minisite/goods?userCode=3xxeu8uc",
+          "logo": "/logos/aliyun.com.ico"
+        },
+        {
+          "name": "野草云",
+          "desc": "野草云（原野草主机）成立于2012年6月份，为中小企业与个人提供免备案的香港云主机、香港VPS云服务器、香港物理服务器、香港服务器租用、美国独立服务器、云虚拟主机、国外域名注册等产",
+          "url": "https://my.yecaoyun.com/aff.php?aff=2804"
+        }
+      ]
+    },
+    {
+      "name": "常用软件",
+      "items": [
+        {
+          "name": "RedisInsight",
+          "desc": "Debug and visualize Redis fast with Redis Insight. Cross-platform, AI-powered, and free. S",
+          "url": "https://redis.com/redis-enterprise/redis-insight/#insight-form",
+          "logo": "/logos/redis.com.ico"
+        },
+        {
+          "name": "老毛桃",
+          "desc": "新毛桃官网为用户提供u盘启动盘制作工具软件下载及新毛桃u盘装系统教程,新毛桃u盘启动盘制作工具支持一键制作万能u盘启动盘,新毛桃兼容多种机型,一键完成u盘装系统",
+          "url": "http://www.laomaotao.org/",
+          "logo": "/logos/laomaotao.org.ico"
+        },
+        {
+          "name": "夜神模拟器",
+          "desc": "安卓模拟器哪个好用？电脑玩手游首选夜神安卓模拟器。夜神模拟器采用领先内核（基于Android7.1），同时是全球首家支持Android9内核的模拟器，在性能、稳定性及兼容性等方面有",
+          "url": "https://www.yeshen.com/",
+          "logo": "/logos/yeshen.com.ico"
+        },
+        {
+          "name": "ScreenToGif",
+          "desc": "Free screen recorder tool. Record, edit and save as a gif or video.",
+          "url": "https://www.screentogif.com/"
+        },
+        {
+          "name": "EV录屏",
+          "desc": "EV录屏，免费高清无水印的录屏软件",
+          "url": "https://www.ieway.cn/evcapture.html"
+        },
+        {
+          "name": "M.O",
+          "desc": "Motrix is a full-featured download manager that supports downloading HTTP, FTP, BitTorrent",
+          "url": "https://motrix.app",
+          "logo": "/logos/motrix.app.ico"
+        },
+        {
+          "name": "格式工厂",
+          "desc": "格式工厂最新版下载，视频/音频/图片/文档格式转换一站式处理。",
+          "url": "http://www.pcgeshi.com/download.html",
+          "logo": "/logos/pcgeshi.com.png"
+        },
+        {
+          "name": "爱思助手",
+          "desc": "爱思助手是一款专业的苹果手机管理工具，提供海量正版iPhone、iPad应用、游戏、铃声、壁纸等免费下载、一键刷机、设备数据备份与恢复、系统维护等全方位服务，是亿万果粉的必备助手。",
+          "url": "https://www.i4.cn/",
+          "logo": "/logos/i4.cn.png"
+        },
+        {
+          "name": "小飞兔",
+          "desc": "小飞兔下载是一款高效的网页整站下载工具，支持批量下载、深度抓取和多线程加速。无论是普通网页还是使用 Vue、AJAX 异步加载的动态网站，都能智能识别并完整下载。",
+          "url": "https://www.xftsoft.com/",
+          "logo": "/logos/xftsoft.com.ico"
+        },
+        {
+          "name": "GitHub Desktop",
+          "desc": "GitHub is where people build software. More than 225 million people use GitHub to discover",
+          "url": "https://desktop.github.com/",
+          "logo": "/logos/desktop.github.com.svg"
+        },
+        {
+          "name": "Sourcetree",
+          "desc": "sourcetreeapp.com",
+          "url": "https://www.sourcetreeapp.com"
+        },
+        {
+          "name": "Apifox",
+          "desc": "Apifox = Postman + Swagger + Mock + JMeter。集接口文档工具、接口Mock工具、接口自动化测试工具、接口调试工具于一体，提升 10 倍研发效",
+          "url": "https://www.apifox.cn/",
+          "logo": "/logos/apifox.cn.png"
+        },
+        {
+          "name": "Postman",
+          "desc": "Try Postman for free! Join 50 million users who rely on Postman, the collaboration platfor",
+          "url": "https://www.getpostman.com/downloads/",
+          "logo": "/logos/getpostman.com.ico"
+        },
+        {
+          "name": "PicGo",
+          "desc": "molunerfinn.com",
+          "url": "https://molunerfinn.com/PicGo",
+          "logo": "/logos/molunerfinn.com.ico"
+        },
+        {
+          "name": "OSSBrowser2",
+          "desc": "本文为您介绍在Windows、macOS以及Linux系统上如何安装ossbrowser 2.0。",
+          "url": "https://help.aliyun.com/zh/oss/developer-reference/installing-the-ossbrowser-2-0",
+          "logo": "/logos/help.aliyun.com.svg"
+        },
+        {
+          "name": "TortoiseSVN",
+          "desc": "download TortoiseSVN",
+          "url": "https://tortoisesvn.net/downloads.html"
+        },
+        {
+          "name": "FileZilla",
+          "desc": "FileZilla是一种快速、可信赖的FTP客户端以及服务器端开放源代码程式，具有多种特色、直觉的接口。可控性、有条理的界面和管理多站点的简化方式使得Filezilla客户端版成为",
+          "url": "https://www.filezilla.cn/download/client",
+          "logo": "/logos/filezilla.cn.ico"
+        },
+        {
+          "name": "SecureCRT",
+          "desc": "sysin.org",
+          "url": "https://sysin.org/blog/securecrt-9-1/",
+          "logo": "/logos/sysin.org.ico"
+        },
+        {
+          "name": "FinalShell",
+          "desc": "FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.特色功能:云端同步,免费海外服务器远程桌面加速,ss",
+          "url": "http://www.hostbuf.com/t/988.html"
+        },
+        {
+          "name": "Xshell 6",
+          "desc": "业界最强大的SSH客户机 下载 立即购买 Xshell的优点 管理一切 使用 Xshell 的会话管理器、快速命令管理器、选项卡管理器和文件管理器，管理远程主机比以往更容易。 将管",
+          "url": "https://www.netsarang.com/zh/xshell/"
+        },
+        {
+          "name": "PHPStudy",
+          "desc": "通过小皮面板安装脚本，2 分钟完成 Linux 服务器一键部署，支持 CentOS、Ubuntu、Debian、OpenEuler 系统，集成网站、FTP、数据库、文件管理等功能，",
+          "url": "https://www.xp.cn/download.html",
+          "logo": "/logos/xp.cn.ico"
+        },
+        {
+          "name": "CHINER元数建模",
+          "desc": "Gitee.com（码云） 是 OSCHINA.NET 推出的代码托管平台，支持 Git 和 SVN，提供免费的私有仓库托管。目前已有超过 1400万的开发者选择 Gitee。",
+          "url": "https://gitee.com/robergroup/chiner/releases/v3.5.7",
+          "logo": "/logos/gitee.com.ico"
+        },
+        {
+          "name": "Navicat",
+          "desc": "下载免费的 Navicat Premium 14 天试用版，并尝试 Navicat 版本 17 的最新功能。",
+          "url": "https://www.navicat.com.cn/download/navicat-premium",
+          "logo": "/logos/navicat.com.cn.ico"
+        },
+        {
+          "name": "HBuilder X",
+          "desc": "HBuilderX是DCloud推出的轻巧而强大的Vue和uni-app (x) 开发工具，同时支持HTML5、JavaScript、CSS、Vue等前端开发。极速启动，强大的代码",
+          "url": "https://www.dcloud.io/hbuilderx.html",
+          "logo": "/logos/dcloud.io.ico"
+        },
+        {
+          "name": "微信小程序",
+          "desc": "微信开发者平台文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html",
+          "logo": "/logos/developers.weixin.qq.com.ico"
+        },
+        {
+          "name": "Visual Studio Code",
+          "desc": "Download Visual Studio Code for free on Linux, macOS, and Windows. The open source AI code",
+          "url": "https://code.visualstudio.com/Download",
+          "logo": "/logos/code.visualstudio.com.ico"
+        },
+        {
+          "name": "Shadowrocket",
+          "desc": "在 App Store 上查找适用于 iPhone、iPad、Mac 等设备的 App 和游戏。",
+          "url": "https://apps.apple.com/us/app/shadowrocket/id932747118",
+          "logo": "/logos/apps.apple.com.ico"
+        },
+        {
+          "name": "Clash",
+          "desc": "github.com",
+          "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "clash-verge-rev",
+          "desc": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailor",
+          "url": "https://github.com/clash-verge-rev/clash-verge-rev",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "V2rayX",
+          "desc": "GUI for v2ray-core on macOS. Contribute to Cenmrev/V2RayX development by creating an accou",
+          "url": "https://github.com/Cenmrev/V2RayX",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "V2rayNG",
+          "desc": "A V2Ray client for Android, support Xray core and v2fly core - 2dust/v2rayNG",
+          "url": "https://github.com/2dust/v2rayNG/releases",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "V2rayN",
+          "desc": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others - 2dust/v2",
+          "url": "https://github.com/2dust/v2rayN/releases",
+          "logo": "/logos/github.com.svg"
+        },
+        {
+          "name": "BandiZip",
+          "desc": "免费压缩解压软件 Bandizip！支持 ZIP、RAR、7Z、ALZ、EGG 等格式，快速压缩与解压。立即免费下载官方版。",
+          "url": "https://cn.bandisoft.com/bandizip/",
+          "logo": "/logos/cn.bandisoft.com.ico"
+        },
+        {
+          "name": "网易云音乐",
+          "desc": "网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。",
+          "url": "https://music.163.com/#/download",
+          "logo": "/logos/music.163.com.ico"
+        },
+        {
+          "name": "百度网盘",
+          "desc": "百度网盘为您提供文件的网络备份、同步和分享服务。空间大、速度快、安全稳固，支持教育网加速，支持手机端。现在注册即有机会享受2T的免费存储空间",
+          "url": "https://pan.baidu.com/download"
+        },
+        {
+          "name": "网易邮箱大师",
+          "desc": "网易邮箱大师：高效强大的全平台邮箱客户端，支持所有平台：iOS、Android、 Windows、MAC；支持一个大师账号管理你的所有邮箱客户端；支持一键添加所有邮箱：163、12",
+          "url": "http://mail.163.com/dashi/",
+          "logo": "/logos/mail.163.com.png"
+        },
+        {
+          "name": "Zoom",
+          "desc": "下载适用于移动设备、台式机、Web 浏览器或操作系统的 Zoom 应用、插件和附加组件。 适用于 Mac、电脑、Android、Chrome 和 Firefox。",
+          "url": "https://zoom.us/download",
+          "logo": "/logos/zoom.us.ico"
+        },
+        {
+          "name": "TeamViewer",
+          "desc": "下载适用于 Windows 系统的最新版 TeamViewer。远程控制和访问您的设备。",
+          "url": "https://www.teamviewer.cn/cn/download/windows/"
+        },
+        {
+          "name": "火绒安全",
+          "desc": "火绒安全致力于在终端安全领域，为用户提供专业的产品和专注的服务，并持续对外赋能反病毒引擎等自主研发技术，拥有免费个人产品“火绒安全软件”，及企业产品“火绒终端安全管理系统”。",
+          "url": "https://www.huorong.cn/",
+          "logo": "/logos/huorong.cn.png"
+        },
+        {
+          "name": "Typora",
+          "desc": "typora.io",
+          "url": "https://www.typora.io/"
+        },
+        {
+          "name": "WPS",
+          "desc": "pc.wps.cn",
+          "url": "https://pc.wps.cn/",
+          "logo": "/logos/pc.wps.cn.ico"
+        },
+        {
+          "name": "XMind",
+          "desc": "一键开启 Xmind 在线版免费试用，AI 赋能 + 实时协作，快速提升生产力！",
+          "url": "https://www.xmind.cn/download/",
+          "logo": "/logos/xmind.cn.ico"
+        },
+        {
+          "name": "PotPlayer",
+          "desc": "potplayer.daum.net",
+          "url": "https://potplayer.daum.net/?lang=zh_CN"
+        },
+        {
+          "name": "谷歌浏览器",
+          "desc": "得益于 Google 智能功能，Chrome 现在更易用、更安全，也更快速。",
+          "url": "https://www.google.com/intl/zh-CN/chrome/"
+        },
+        {
+          "name": "火狐浏览器",
+          "desc": "The independent browser that has your back. Firefox blocks trackers, has a free built-in V",
+          "url": "https://www.firefox.com",
+          "logo": "/logos/firefox.com.ico"
+        },
+        {
+          "name": "链图网",
+          "desc": "链图云是图片世界的路由器，帮您轻松找图找字体。可提供强大的本机以图搜图和企业跨机搜图能力，提供图片存证版权服务，帮您管好图像和字体数字资产。",
+          "url": "http://www.lianty.com/"
+        },
+        {
+          "name": "Telegram",
+          "desc": "Fast. Secure. Powerful.",
+          "url": "https://telegram.org/"
+        },
+        {
+          "name": "飞书",
+          "desc": "下载飞书，用一个工具完成办公协作、人事管理、企业经营。现已支持 macOS，Windows，Linux，iOS 及 Android 设备。",
+          "url": "https://www.feishu.cn/download",
+          "logo": "/logos/feishu.cn.ico"
+        },
+        {
+          "name": "微信",
+          "desc": "一款跨平台的通讯工具。支持单人、多人参与。通过手机网络发送语音、图片、视频和文字。",
+          "url": "https://weixin.qq.com"
+        },
+        {
+          "name": "TIM",
+          "desc": "TIM，QQ办公简洁版，是一款专注于团队办公协作的跨平台沟通工具。登录后，你的QQ好友都在，提供云文件、在线文档、邮件、日程、收藏等好用的办公功能，界面简洁清晰，QQ好友和消息无缝",
+          "url": "https://tim.qq.com/download.html",
+          "logo": "/logos/tim.qq.com.png"
+        },
+        {
+          "name": "uTools",
+          "desc": "uTools，你的下一代工具平台。汇聚海量实用工具 · AI 生成应用 · 自动执行任务 · 连接 AI Agent",
+          "url": "https://u.tools",
+          "logo": "/logos/u.tools.png"
+        }
+      ]
+    }
+  ]
+}

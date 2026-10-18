@@ -1,0 +1,32 @@
+{
+  "enabled": true,
+  "kicker": "SUPPORT",
+  "title": "赞赏支持",
+  "intro": "如果这里的内容或工具帮到了你，可以请我喝杯咖啡。赞赏纯属心意，不构成任何服务承诺。",
+  "amounts": [0.01, 0.88, 1.68, 6.66, 8.88, 16.88, 18.88, 66.66, 88.88, 168.88],
+  "customAmount": true,
+  "methods": [
+    {
+      "id": "wechat",
+      "name": "微信",
+      "icon": "💚",
+      "qr": "/donate/wechat.png",
+      "note": "打开微信扫一扫"
+    },
+    {
+      "id": "alipay",
+      "name": "支付宝",
+      "icon": "💙",
+      "qr": "/donate/alipay.png",
+      "note": "打开支付宝扫一扫"
+    }
+  ],
+  "note": "扫码后手动填写金额即可。赞赏完可以在下面留个名，确认后会出现在赞赏墙上。",
+  "provider": {
+    "type": "qr",
+    "aggregator": "",
+    "merchantId": "",
+    "apiKey": "",
+    "notifyUrl": ""
+  }
+}

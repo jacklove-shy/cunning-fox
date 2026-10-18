@@ -1,0 +1,32 @@
+{
+  "name": "一只狡猾的狐狸 · 工具、笔记与作品",
+  "short_name": "一只狡猾的狐狸",
+  "description": "一只狡猾的狐狸：技术笔记、能直接用的工具、以及做过的东西。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080b12",
+  "theme_color": "#ef7d3a",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

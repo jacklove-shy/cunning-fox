@@ -1,0 +1,20 @@
+{
+  "name": "xiaolong-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "个人博客 / 工具集市 / 项目展示 —— 前后端分离全栈站，求职自动化中台作为其中一个模块",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm -w @pf/api run dev",
+    "dev:web": "npm -w @pf/web run dev",
+    "build": "npm -w @pf/web run build",
+    "start": "npm -w @pf/api run start",
+    "seed": "npm -w @pf/api run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

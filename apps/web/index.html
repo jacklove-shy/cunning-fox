@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover：让页面铺到 iPhone 刘海/圆角区域，配合 env(safe-area-inset-*) 使用 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>一只狡猾的狐狸 · 工具、笔记与作品</title>
+    <meta name="description" content="一只狡猾的狐狸：技术笔记、能直接用的工具、以及做过的东西。" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- 移动端 / PWA -->
+    <meta name="theme-color" content="#080b12" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7f9fd" media="(prefers-color-scheme: light)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="一只狡猾的狐狸" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // 首屏前定主题，避免闪白
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

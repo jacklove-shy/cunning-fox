@@ -1,0 +1,36 @@
+{
+ "updatedAt": "2026-10-17T10:37:36.397Z",
+ "source": "nowcoder · 前端校招面试题目合集",
+ "sourceUrl": "https://www.nowcoder.com/ta/review-frontend",
+ "total": 2,
+ "catStat": {
+  "浏览器": 1,
+  "HTML": 1
+ },
+ "questions": [
+  {
+   "id": "nc_1",
+   "no": 1,
+   "cat": "浏览器",
+   "q": "浏览器页面有哪三层构成，分别是什么，作用是什么?",
+   "a": "构成：结构层、表示层、行为层  \n\n 分别是：HTML、CSS、JavaScript  \n\n 作用：HTML实现页面结构，CSS完成页面的表现与风格，JavaScript实现一些客户端的功能与业务。",
+   "url": "https://www.nowcoder.com/ta/review-frontend/review?query=&asc=true&order=&page=1",
+   "source": "nowcoder",
+   "fetchedAt": "2026-10-17T10:37:35.490Z",
+   "mastery": 0,
+   "starred": false
+  },
+  {
+   "id": "nc_2",
+   "no": 2,
+   "cat": "HTML",
+   "q": "HTML5的优点与缺点？",
+   "a": "优点： a、网络标准统一、HTML5本身是由W3C推荐出来的。 \n\n           b、多设备、跨平台  \n\n           c、即时更新。 \n\n           d、提高可用性和改进用户的友好体验； \n\n           e、有几个新的标签，这将有助于开发人员定义重要的内容；  \n\n           f、可以给站点带来更多的多媒体元素(视频和音频)；   \n\n           g、可以很好的替代Flash和Silverlight； \n\n           h、涉及到网站的抓取和索引的时候，对于SEO很友好；  \n\n           i、被大量应用于移动应用程序和游戏。  \n\n \n\n 缺点： a、安全：像之前Firefox4的web socket和透明代理的实现存在严重的安全问题，同时web storage、web\n socket 这样的功能很容易被黑客利用，来盗取用户的信息和资料。  \n\n           b、完善性：许多特性各浏览器的支持程度也不一样。  \n\n           c、技术门槛：HTML5简化开发者工作的同时代表了有许多新的属性和API需要开发者学习，像web\n worker、web socket、web storage 等新特性，后台甚至浏览器原理的知识，机遇的同时也是巨大的挑战  \n\n           d、性能：某些平台上的引擎问题导致HTML5性能低下。  \n\n           e、浏览器兼容性：最大缺点，IE9以下浏览器几乎全军覆没。",
+   "url": "https://www.nowcoder.com/ta/review-frontend/review?query=&asc=true&order=&page=2",
+   "source": "nowcoder",
+   "fetchedAt": "2026-10-17T10:37:36.397Z",
+   "mastery": 0,
+   "starred": false
+  }
+ ]
+}

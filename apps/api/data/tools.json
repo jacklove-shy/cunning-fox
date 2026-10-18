@@ -1,0 +1,328 @@
+[
+  {
+    "id": "t_video-search",
+    "slug": "video-search-hub",
+    "name": "影视聚合搜索",
+    "desc": "聚合 iTunes 电影 + TVMaze 剧集公开片库，一个输入框检索，按类型/年份/评分筛选，只做索引不存储。",
+    "cat": "影视工具",
+    "tags": [
+      "搜索",
+      "聚合"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "hot": true,
+    "icon": "🎬"
+  },
+  {
+    "id": "t_subtitle-bat",
+    "slug": "subtitle-batch",
+    "name": "字幕工具箱",
+    "desc": "本地字幕批量处理：按视频名智能改名（先预览后执行）、SRT↔VTT 互转、GBK 乱码修复、时间轴整体移位。",
+    "cat": "影视工具",
+    "tags": [
+      "字幕",
+      "批处理"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "💬"
+  },
+  {
+    "id": "t_video-transc",
+    "slug": "video-transcode",
+    "name": "视频转码工作台",
+    "desc": "基于 ffmpeg 的批量转码：H.264 / 极限压缩 / 720P / GIF / 提取 MP3 / VP9，任务队列执行带实时进度。",
+    "cat": "影视工具",
+    "tags": [
+      "ffmpeg",
+      "转码"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🎞️"
+  },
+  {
+    "id": "t_img-dewaterm",
+    "slug": "img-dewatermark",
+    "name": "图片批量去水印",
+    "desc": "本地选图→框选区域→智能/模糊/纯色三模式批量处理，输出到新目录，原图不动。",
+    "cat": "去水印",
+    "tags": [
+      "Canvas",
+      "inpainting"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🩹"
+  },
+  {
+    "id": "t_video-dewate",
+    "slug": "video-dewatermark",
+    "name": "视频去水印",
+    "desc": "ffmpeg delogo 区域抹除：框选水印→批量重编码，固定位置角标/片头水印效果最好。",
+    "cat": "去水印",
+    "tags": [
+      "视频",
+      "合规"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🎥"
+  },
+  {
+    "id": "t_boss-helper",
+    "slug": "boss-helper",
+    "name": "BOSS 求职助手",
+    "desc": "Chrome 扩展（MV3）：岗位结构化、匹配度打分、批量投递。需在扩展环境使用，入口见「插件集」。",
+    "cat": "浏览器插件",
+    "tags": [
+      "自研",
+      "求职"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "hot": true,
+    "icon": "🧭"
+  },
+  {
+    "id": "t_page-ruler",
+    "slug": "page-ruler",
+    "name": "网页标尺",
+    "desc": "量任意元素尺寸、间距、字体，支持吸附与取色。",
+    "cat": "浏览器插件",
+    "tags": [
+      "调试",
+      "UI"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "📏"
+  },
+  {
+    "id": "t_json-viewer",
+    "slug": "json-viewer",
+    "name": "JSON 格式化",
+    "desc": "自动识别接口返回的 JSON，折叠、搜索、路径复制。",
+    "cat": "浏览器插件",
+    "tags": [
+      "调试",
+      "JSON"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🧾"
+  },
+  {
+    "id": "t_snake-game",
+    "slug": "snake-game",
+    "name": "贪吃蛇",
+    "desc": "键盘 + 触屏都能玩，最高分存本地。",
+    "cat": "小游戏",
+    "tags": [
+      "Canvas",
+      "经典"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🐍"
+  },
+  {
+    "id": "t_game-2048",
+    "slug": "game-2048",
+    "name": "2048",
+    "desc": "支持撤销与历史最高分，动画流畅。",
+    "cat": "小游戏",
+    "tags": [
+      "React",
+      "经典"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🔢"
+  },
+  {
+    "id": "t_typing-test",
+    "slug": "typing-test",
+    "name": "打字速度测试",
+    "desc": "中英文双语，统计 WPM、准确率与错字热区。",
+    "cat": "小游戏",
+    "tags": [
+      "练习",
+      "统计"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "⌨️"
+  },
+  {
+    "id": "t_nowcoder-syn",
+    "slug": "nowcoder-sync",
+    "name": "牛客题库同步器",
+    "desc": "一键抓取牛客前端校招题库（464 题含参考答案）入库，站内按分类刷题、标记掌握度。",
+    "cat": "开发工具",
+    "tags": [
+      "爬虫",
+      "Node"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "hot": true,
+    "icon": "📚"
+  },
+  {
+    "id": "t_prompt-vault",
+    "slug": "prompt-vault",
+    "name": "提示词仓库",
+    "desc": "按场景归档常用提示词，支持变量占位与一键复制。",
+    "cat": "AI 工具",
+    "tags": [
+      "Prompt",
+      "效率"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "🗂️"
+  },
+  {
+    "id": "t_resume-polis",
+    "slug": "resume-polish",
+    "name": "简历润色体检",
+    "desc": "规则引擎离线体检（弱动词/空话/缺量化/超长）+ 可选 LLM 深度改写，输出问题清单和改进稿。",
+    "cat": "AI 工具",
+    "tags": [
+      "LLM",
+      "求职"
+    ],
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "icon": "✨"
+  },
+  {
+    "id": "t_jobhunter",
+    "slug": "job-hunter-console",
+    "name": "简历投递系统",
+    "desc": "自动扫岗、匹配打分、批量投递、看板跟踪——点开直接进中台。",
+    "cat": "我的项目",
+    "tags": [
+      "求职",
+      "自动化",
+      "Node"
+    ],
+    "url": "http://127.0.0.1:8080",
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "hot": true,
+    "icon": "🚀"
+  },
+  {
+    "id": "pj_portfolio",
+    "slug": "portfolio-site",
+    "name": "本站：前后端分离的个人集市",
+    "desc": "React + TypeScript 前端，Express + TS 后端，Monorepo 管理；博客、工具集市、项目展示三合一。",
+    "cat": "我的项目",
+    "tags": [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind",
+      "Express"
+    ],
+    "repo": "https://github.com/",
+    "createdAt": "2026-10-17T10:00:00.000Z",
+    "icon": "🏗️"
+  },
+  {
+    "id": "pj_nowcoder",
+    "slug": "nowcoder-project",
+    "name": "牛客题库同步器",
+    "desc": "零依赖 Node 脚本，串行抓取 461 道前端面试题，自动分类并保留个人掌握度进度。",
+    "cat": "我的项目",
+    "tags": [
+      "Node.js",
+      "爬虫",
+      "正则"
+    ],
+    "to": "/posts/nowcoder-461-questions",
+    "createdAt": "2026-10-17T10:00:00.000Z",
+    "icon": "📚"
+  },
+  {
+    "id": "pj_qqbot",
+    "slug": "qqbot",
+    "name": "QQ 机器人播报",
+    "desc": "把中台的关键指标同步到手机：今日投递数、新邀约、待笔试提醒。",
+    "cat": "我的项目",
+    "tags": [
+      "Bot API",
+      "Node.js"
+    ],
+    "repo": "https://github.com/",
+    "createdAt": "2026-10-17T10:00:00.000Z",
+    "icon": "🤖"
+  },
+  {
+    "id": "pj_extensions",
+    "slug": "extensions",
+    "name": "浏览器插件集",
+    "desc": "求职助手、网页标尺、JSON 格式化三个自用插件，覆盖调试与效率场景。",
+    "cat": "我的项目",
+    "tags": [
+      "Manifest V3",
+      "Content Script",
+      "Service Worker"
+    ],
+    "to": "/posts/chrome-extension-from-zero",
+    "createdAt": "2026-10-17T10:00:00.000Z",
+    "icon": "🧩"
+  },
+  {
+    "id": "pj_games",
+    "slug": "games",
+    "name": "小游戏合集",
+    "desc": "贪吃蛇、2048、打字测试，用 Canvas 与 React 各实现一遍，练手感也练动画。",
+    "cat": "我的项目",
+    "tags": [
+      "Canvas",
+      "React",
+      "CSS 动画"
+    ],
+    "repo": "https://github.com/",
+    "createdAt": "2026-10-17T10:00:00.000Z",
+    "icon": "🎮"
+  },
+  {
+    "id": "t_wedding-ledg",
+    "slug": "wedding-ledger",
+    "name": "婚礼礼账本",
+    "desc": "随礼记账理账一条龙：现场快记、按人/关系/方属/记账人查询统计；5 种模拟手写字体 × 4 种卡纸模板渲染礼账簿，连接打印机输出 A4 成册与答谢卡。",
+    "cat": "生活工具",
+    "tags": [
+      "婚礼",
+      "记账",
+      "手写体",
+      "打印"
+    ],
+    "createdAt": "2026-10-17T11:00:00.000Z",
+    "hot": true,
+    "icon": "💒"
+  },
+  {
+    "id": "t_dev-toolbox",
+    "slug": "dev-toolbox",
+    "name": "开发者工具箱",
+    "desc": "对标常见在线工具站：Base64/URL/Hex/Unicode 编解码、时间戳互转、SHA 摘要、UUID 与随机密码、颜色互转、正则测试、单位换算、进制转换、文本差异对比——全部在浏览器内完成，不上传。",
+    "cat": "开发工具",
+    "tags": [
+      "编码",
+      "时间戳",
+      "哈希",
+      "正则",
+      "换算"
+    ],
+    "createdAt": "2026-10-17T15:00:00.000Z",
+    "hot": true,
+    "icon": "🧰"
+  },
+  {
+    "id": "t_auto-apply-guide",
+    "slug": "auto-apply-guide",
+    "name": "自动投递接入指南",
+    "desc": "接入自检（Kimi 桥接 / 求职中台 / 本站账号三盏灯）+ 四步跑通自动投递 + 多用户化与数据同步方案：为什么引擎必须留在本机、云端该存什么。",
+    "cat": "开发工具",
+    "tags": [
+      "求职",
+      "自动投递",
+      "Kimi",
+      "架构"
+    ],
+    "createdAt": "2026-10-17T15:30:00.000Z",
+    "hot": true,
+    "icon": "🤖"
+  }
+]
