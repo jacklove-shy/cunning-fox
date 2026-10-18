@@ -101,7 +101,14 @@ app.get('/api/search', (req, res) => {
 app.use('/api/posts', postsRouter);
 app.use('/api/tools', toolsRouter);
 app.use('/api', extraRouter);
-app.use('/api/toolkit', toolkitRouter);
+// 工具运行时（文件读写 / ffmpeg / 子进程）默认仅在本地开启；
+// 公开部署或隧道分享时务必设 ENABLE_TOOLKIT=0，否则会把本机文件系统暴露给公网。
+// 本地开发（npm run dev）默认开启，无需额外配置。
+if (process.env.ENABLE_TOOLKIT !== '0') {
+  app.use('/api/toolkit', toolkitRouter);
+} else {
+  console.log('[api] toolkit 路由未挂载（ENABLE_TOOLKIT=0）→ 公网暴露更安全');
+}
 app.use('/api/wedding', weddingRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/ai', aiRouter);
