@@ -13,6 +13,16 @@ apps/web/dist/
 # ---- 运行时数据：含密码哈希与 Token 签名密钥 ----
 apps/api/data/auth.json
 
+# ---- SQLite 运行时数据（node:sqlite 单文件库 + WAL） ----
+apps/api/data/*.db
+apps/api/data/*.db-wal
+apps/api/data/*.db-shm
+
+# ---- 用户生成内容（UGC）运行时数据：启动时 seed.ts 自动建空文件，勿入库 ----
+apps/api/data/comments.json
+apps/api/data/friends.json
+apps/api/data/donations.json
+
 # ---- 工具运行时临时产物 / 个人求职同步数据 ----
 apps/api/data/work/
 apps/api/data/job-sync/

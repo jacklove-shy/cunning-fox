@@ -14,7 +14,8 @@ import { toolkitRouter } from './routes/toolkit.js';
 import { weddingRouter } from './routes/wedding.js';
 import { authRouter } from './routes/auth.js';
 import { aiRouter } from './routes/ai.js';
-import { ensureAuthSeed } from './services/auth.js';
+import { ensureAuthSeed, migrateAuthFromJson } from './services/auth.js';
+import { initDb } from './db.js';
 import { recoverJobs } from './services/toolkit.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -25,6 +26,8 @@ const PORT = Number(process.env.PORT || 3001);
 const HOST = process.env.HOST || '127.0.0.1';
 
 ensureSeed();
+initDb(); // 打开 SQLite（node:sqlite 内置，零 npm 依赖）并执行版本化迁移
+migrateAuthFromJson(); // 一次性：legacy auth.json 数据搬进 SQLite（之后自动跳过）
 ensureAuthSeed(); // 权限系统：首次运行创建默认管理员 admin/admin1234
 recoverJobs(); // 恢复任务队列：重启前未完成的任务标记为中断
 
