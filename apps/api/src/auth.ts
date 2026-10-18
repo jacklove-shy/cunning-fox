@@ -14,10 +14,14 @@ export function requireAdmin(req: Request, res: Response, next: NextFunction) {
     (req.headers['x-admin-token'] as string | undefined) ||
     (req.headers.authorization || '').replace(/^Bearer\s+/i, '');
   if (got === ADMIN_TOKEN) return next();
-  const p = verifyToken(got);
-  if (p && p.role === 'admin') return next();
-  // 已登录但角色不足 → 403；完全没登录 / 凭据无效 → 401。
-  // 区分这两者，前端才能正确决定「弹登录框」还是「提示无权限」。
-  if (p) return res.status(403).json({ error: 'forbidden', hint: '该操作需要管理员权限' });
-  return res.status(401).json({ error: 'unauthorized', hint: '请先在右上角登录（管理员）' });
+  // verifyToken 查 MySQL，是异步的：catch 转 next，别让 rejection 挂起请求
+  verifyToken(got)
+    .then((p) => {
+      if (p && p.role === 'admin') return next();
+      // 已登录但角色不足 → 403；完全没登录 / 凭据无效 → 401。
+      // 区分这两者，前端才能正确决定「弹登录框」还是「提示无权限」。
+      if (p) return res.status(403).json({ error: 'forbidden', hint: '该操作需要管理员权限' });
+      return res.status(401).json({ error: 'unauthorized', hint: '请先在右上角登录（管理员）' });
+    })
+    .catch(next);
 }

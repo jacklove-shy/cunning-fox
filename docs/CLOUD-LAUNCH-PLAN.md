@@ -45,7 +45,7 @@
 | --- | --- | --- |
 | **P0 安全** | git、.env、改密码、焊死 dev-token、工具路由隔离 | 不能。上线即裸奔 |
 | **P1 性能** | compression、缓存头、API 缓存、代码分割 | 能，但浪费 3 倍带宽且首屏慢 |
-| **P2 架构** | SQLite、Repository 抽象、两族路由拆分 | 能。JSON 存储撑一个个人站三五年没有问题 |
+| **P2 架构** | MySQL + mysql2、Repository 抽象、两族路由拆分 | 能。DAO 已抽好，底层库可切换 |
 | **P3 运营** | 备份、监控看门狗、部署脚本 | 能，但数据丢了哭都没地方 |
 
 ---
@@ -274,33 +274,50 @@ const Admin = lazy(() => import('./pages/Admin'));
 
 ---
 
-## 5. P2：数据层演进路线（SQLite）
+## 5. P2：数据层演进路线（MySQL，已落地）
 
-### 5.1 为什么是 SQLite，不是 MySQL
+### 5.1 决策与路线回顾
 
-| 考量 | SQLite | MySQL |
+数据层演进分三步，**核心资产是 Repository 抽象层**，让底层数据库可切换、上游零改动：
+
+1. **json 存储**（起点）：`readJson/writeJson` 原子 rename 写入，单实例无账号库。
+2. **node:sqlite 验证 DAO**（中间态，2026-10-18）：用 Node 22 内置 `node:sqlite` 零依赖落地 DAO + 版本化迁移 + 会话表，证明抽象层成立。
+3. **MySQL + mysql2**（**当前已上线**）：用户拍板走企业主流栈——mysql2 连接池、参数化查询（`execute` 服务端预处理）、环境变量管配置、统一异常捕获；用户/权限/会话表全部迁 MySQL。
+
+> 为什么最终选 MySQL 而非停留在 SQLite：目标是「前后端都按企业实践实操一遍」，MySQL 是国内企业的事实标准，连接池 / 预处理语句 / 账号权限是必修项；且 DAO 层已抽好，切换成本只等于「重写 repo 层 SQL 方言 + 一份连接池模块」，业务代码一行未动。**未来若想迁 PostgreSQL，同样只换 repo 实现（`pg.Pool`）+ 迁移文件方言，services 层原样复用。**
+
+### 5.2 已落地的工程实践（企业化清单）
+
+| 实践 | 落地位置 | 说明 |
 | --- | --- | --- |
-| 数据量 | 文章几十篇、评论几百条——**SQLite 的单文件优势区间** | 杀鸡用牛刀 |
-| 运维 | 一个 `.db` 文件，备份 = 复制文件 | 一个常驻进程 + 账号权限 + 定期巡检 |
-| 云服务器成本 | 2C2G 跑得动 | 同配置跑 MySQL 吃一半内存 |
-| 并发 | 单写者 WAL 模式，读无限制——个人站绰绰有余 | 需要才会需要 |
+| 连接池 | `src/db.ts` `getPool()` | `mysql.createPool`，`connectionLimit=10`、`waitForConnections`、`queueLimit=0`、utf8mb4；2C2G 下内存可控 |
+| 参数化查询防注入 | `src/db.ts` `query/queryOne/execute` | 业务代码只允许走这三个助手，全部 `execute(?)` 占位，SQL 结构与数据分离；**禁止字符串拼接 SQL** |
+| 环境变量管配置 | `src/db.ts` `dbConfig()` | `DB_HOST/DB_PORT/DB_USER/DB_PASSWORD/DB_NAME/DB_POOL_LIMIT`，未提供时给本地默认值；`.env.example` 文档化 |
+| 统一异常捕获 | `src/middleware/asyncHandler.ts` | Express 4 不自动捕获 async 异常，所有异步路由处理器用 `asyncHandler` 包裹，rejection 汇入统一错误出口 |
+| 版本化迁移 | `src/db/migrations/*.sql` | 按文件名排序 + `_migrations` 表去重 + 单迁移事务（InnoDB DDL 事务，失败整体回滚） |
+| 账号/权限/会话 | `src/repo/auth.ts` | users / sessions / auth_meta 三表；Token 加 `jti` 落 sessions，支持改密踢全员、单会话撤销 |
 
-### 5.2 演进路径（不推倒重来）
+### 5.3 本地 MySQL 跑法（便携版，不装系统服务）
 
-1. **Repository 抽象先行**：现在 `readJson/writeJson` 散落在各 route 文件里。先建 `src/repo/`，把每个实体（posts/tools/comments/donations/friends…）的读写收拢成函数：
-   ```ts
-   // src/repo/posts.ts
-   export function listPublished(): Post[] { /* 内部先走 JSON */ }
-   export function create(p: Post): void { /* 内部先走 JSON */ }
-   ```
-2. **引入 better-sqlite3**：把 repo 内部实现换成 SQL，建表语句随首次启动执行。route 文件一行不用改。
-3. **数据搬家**：写个一次性脚本 `scripts/migrate-json-to-sqlite.ts`，读现有 JSON 灌进 SQLite，跑完原文件改名 `.bak` 留一个月。
+开发机无 Docker / 无系统 MySQL 时，用官方便携包（已下到 `E:\WorkBuddy\tools\mysql-8.0.28-winx64`）：
 
 ```bash
-npm -w @pf/api install better-sqlite3
+# 初始化（仅一次）
+mysqld --initialize-insecure --datadir=E:/WorkBuddy/tools/mysql-8.0.28-winx64/data
+# 启动（后台）
+mysqld --datadir=E:/WorkBuddy/tools/mysql-8.0.28-winx64/data --console
+# 建库建用户
+mysql -u root -e "CREATE DATABASE portfolio CHARACTER SET utf8mb4;
+  CREATE USER 'portfolio'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY '';
+  GRANT ALL ON portfolio.* TO 'portfolio'@'127.0.0.1';"
 ```
 
-> 为什么不是现在：JSON 存储在**当前数据量和个人站场景下没有实际问题**，read-modify-write 的并发风险被「管理员只有你一个人」这个事实抵消。先上线，等评论/赞赏真的多到 JSON 卡了（读一次全文件 parse 超过 50ms）再迁。**为想象中的规模提前架构，是这个阶段最贵的错误。**
+### 5.4 数据搬家（一次性）
+
+- `scripts/migrate-sqlite-to-mysql.mjs`：读旧的 `app.db`（node:sqlite 版）灌进 MySQL，幂等（`ON DUPLICATE KEY UPDATE`），原文件保留作备份。
+- 上云后若从零部署，跳过此脚本，首次启动 `ensureAuthSeed` 直接建管理员。
+
+> 上线权衡：MySQL 8 空跑约 400–600MB，2C2G 云服务器需把 Nginx/PM2/Node 内存压在 1.2G 内；**若日后数据量始终很小，可回退到 SQLite（DAO 支持）或换托管数据库（云厂 RDS），避免自建 mysqld 运维负担。**
 
 ---
 
@@ -433,7 +450,7 @@ pm2 restart portfolio           # API 是 tsx 直跑，重启即生效
 要备份的只有两个东西：
 
 1. **代码** → GitHub 私有仓库（git push 就是备份）
-2. **数据** → `apps/api/data/`（SQLite 迁移后就是那一个 `.db` 文件）
+2. **数据** → MySQL 实例（连接串由 `DB_*` 环境变量配置；`apps/api/data/` 仅留 JSON 内容数据，不再是账号库）
 
 服务器 cron，每天凌晨打包数据目录，保留 14 天：
 
@@ -465,7 +482,7 @@ pm2 restart portfolio           # API 是 tsx 直跑，重启即生效
 | **阶段 1** | §3 全部 P0 项 | admin1234 登录失败；dev-token 失效；云端部署物里没有 toolkit 路由 | 半天 |
 | **阶段 2** | §4 全部 P1 项 | 首屏传输量 < 100KB；首页 API ≤ 6 次 | 半天 |
 | **阶段 3** | 域名 + 备案 + 服务器 + Nginx + PM2 + HTTPS | `https://你的域名` 全站可访问，HTTP 跳转 HTTPS | 备案 1-3 周（并行），部署半天 |
-| **阶段 4** | 备份 cron + 健康检查 +（可选）SQLite 迁移 | 演练一次「删数据文件 → 从备份恢复」成功 | 半天 |
+| **阶段 4** | 备份 cron（mysqldump）+ 健康检查 + 演练一次恢复 | 演练一次「删库 → 从备份恢复」成功 | 半天 |
 
 **阶段 0-2 在买服务器之前就能全部做完。** 买服务器应该是最后一步，不是第一步——本机 3001 跑着的这个站，先按生产标准收拾干净，上云当天只是「换个地方 `git pull`」。
 
@@ -545,4 +562,4 @@ pm2 restart portfolio           # API 是 tsx 直跑，重启即生效
 | `apps/api/src/index.ts` | cors 收紧、compression、缓存头、meta 缓存、toolkit 条件挂载 | 1 / 2 |
 | `apps/api/src/auth.ts` | ADMIN_TOKEN 无默认值 | 1 |
 | `apps/web/src/App.tsx`（或等价路由文件） | 路由懒加载 | 2 |
-| `apps/api/src/repo/*.ts` | 新建（SQLite 阶段） | 4（可选） |
+| `apps/api/src/repo/*.ts` | 新建（MySQL 阶段，已落地 auth 实体） | 4（可选） |

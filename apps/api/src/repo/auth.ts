@@ -1,12 +1,16 @@
-import { getDb } from '../db.js';
+import { execute, query, queryOne } from '../db.js';
 
 /**
- * auth DAO（数据访问层）。
+ * auth DAO（数据访问层，MySQL 实现）。
  *
  * 边界约定：本文件是账号/会话数据进出的唯一通道。
- * - 上游（services/auth.ts）只认这里的 TypeScript 接口，不关心底层是 SQLite 还是 PostgreSQL；
+ * - 上游（services/auth.ts）只认这里的 TypeScript 接口，不关心底层是 MySQL 还是 PostgreSQL；
  * - 迁 PG 时只重写本文件的 SQL 与连接来源，接口签名保持不变，上游零改动；
- * - 不在本文件写业务规则（校验、加密、Token 逻辑都在 services 层）。
+ * - 不在本文件写业务规则（校验、加密、Token 逻辑都在 services 层）；
+ * - 所有 SQL 一律参数化（? 占位 + execute 预处理），禁止字符串拼接。
+ *
+ * 异步说明：MySQL 驱动是 Promise API，本层所有方法均为 async——
+ * 上游 services 层随之全链路 async（Express 侧用 asyncHandler 捕获 rejection）。
  */
 
 export type Role = 'admin' | 'user';
@@ -36,94 +40,93 @@ export interface SessionRow {
 export const authRepo = {
   /* ---------------- users ---------------- */
 
-  countUsers(): number {
-    const row = getDb()
-      .prepare('SELECT COUNT(*) AS n FROM users')
-      .get() as { n: number } | undefined;
-    return row?.n ?? 0;
+  async countUsers(): Promise<number> {
+    const r = await queryOne<{ n: number }>('SELECT COUNT(*) AS n FROM users');
+    return r?.n ?? 0;
   },
 
-  findUser(username: string): UserRow | null {
-    const row = getDb()
-      .prepare('SELECT username, role, salt, hash, pv, created_at AS createdAt FROM users WHERE username = ?')
-      .get(username) as unknown as UserRow | undefined;
-    return row ?? null;
+  async findUser(username: string): Promise<UserRow | null> {
+    return queryOne<UserRow>(
+      'SELECT username, role, salt, hash, pv, created_at AS createdAt FROM users WHERE username = ?',
+      [username]
+    );
   },
 
-  listUsers(): UserRow[] {
-    return getDb()
-      .prepare('SELECT username, role, salt, hash, pv, created_at AS createdAt FROM users ORDER BY created_at ASC')
-      .all() as unknown as UserRow[];
+  async listUsers(): Promise<UserRow[]> {
+    return query<UserRow>(
+      'SELECT username, role, salt, hash, pv, created_at AS createdAt FROM users ORDER BY created_at ASC'
+    );
   },
 
-  insertUser(u: UserRow): void {
-    getDb()
-      .prepare(
-        `INSERT INTO users (username, role, salt, hash, pv, created_at)
-         VALUES (?, ?, ?, ?, ?, ?)`,
-      )
-      .run(u.username, u.role, u.salt, u.hash, u.pv, u.createdAt);
+  async insertUser(u: {
+    username: string;
+    role: Role;
+    salt: string;
+    hash: string;
+    pv: number;
+    createdAt: string;
+  }): Promise<void> {
+    await execute(
+      'INSERT INTO users (username, role, salt, hash, pv, created_at) VALUES (?, ?, ?, ?, ?, ?)',
+      [u.username, u.role, u.salt, u.hash, u.pv, u.createdAt]
+    );
   },
 
-  /** 改密：换盐与哈希，pv+1。行不存在返回 false。 */
-  updatePassword(username: string, salt: string, hash: string, pv: number): boolean {
-    const r = getDb()
-      .prepare('UPDATE users SET salt = ?, hash = ?, pv = ? WHERE username = ?')
-      .run(salt, hash, pv, username);
-    return Number(r.changes) > 0;
+  async updatePassword(username: string, salt: string, hash: string, pv: number): Promise<void> {
+    await execute('UPDATE users SET salt = ?, hash = ?, pv = ? WHERE username = ?', [salt, hash, pv, username]);
   },
 
-  deleteUser(username: string): boolean {
-    // sessions 走 ON DELETE CASCADE，用户没了会话自动消失
-    const r = getDb().prepare('DELETE FROM users WHERE username = ?').run(username);
-    return Number(r.changes) > 0;
+  async deleteUser(username: string): Promise<boolean> {
+    const r = await execute('DELETE FROM users WHERE username = ?', [username]);
+    return r.affectedRows > 0;
   },
 
   /* ---------------- auth_meta ---------------- */
 
-  getMeta(k: string): string | null {
-    const row = getDb().prepare('SELECT v FROM auth_meta WHERE k = ?').get(k) as { v: string } | undefined;
-    return row?.v ?? null;
+  async getMeta(k: string): Promise<string | null> {
+    const r = await queryOne<{ v: string }>('SELECT v FROM auth_meta WHERE k = ?', [k]);
+    return r?.v ?? null;
   },
 
-  setMeta(k: string, v: string): void {
-    getDb()
-      .prepare('INSERT INTO auth_meta (k, v) VALUES (?, ?) ON CONFLICT(k) DO UPDATE SET v = excluded.v')
-      .run(k, v);
+  async setMeta(k: string, v: string): Promise<void> {
+    // 幂等 upsert：密钥只生成一次，重复调用不会报重复键
+    await execute('INSERT INTO auth_meta (k, v) VALUES (?, ?) ON DUPLICATE KEY UPDATE v = VALUES(v)', [k, v]);
   },
 
   /* ---------------- sessions ---------------- */
 
-  insertSession(s: SessionRow): void {
-    getDb()
-      .prepare(
-        `INSERT INTO sessions (jti, username, role, pv, iat, exp, created_at, revoked)
-         VALUES (?, ?, ?, ?, ?, ?, ?, 0)`,
-      )
-      .run(s.jti, s.username, s.role, s.pv, s.iat, s.exp, s.createdAt);
+  async insertSession(s: {
+    jti: string;
+    username: string;
+    role: Role;
+    pv: number;
+    iat: number;
+    exp: number;
+    createdAt: string;
+    revoked: 0 | 1;
+  }): Promise<void> {
+    await execute(
+      `INSERT INTO sessions (jti, username, role, pv, iat, exp, created_at, revoked)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      [s.jti, s.username, s.role, s.pv, s.iat, s.exp, s.createdAt, s.revoked]
+    );
   },
 
-  findSession(jti: string): SessionRow | null {
-    const row = getDb()
-      .prepare(
-        `SELECT jti, username, role, pv, iat, exp, created_at AS createdAt, revoked
-         FROM sessions WHERE jti = ?`,
-      )
-      .get(jti) as unknown as SessionRow | undefined;
-    return row ?? null;
+  async findSession(jti: string): Promise<SessionRow | null> {
+    return queryOne<SessionRow>(
+      `SELECT jti, username, role, pv, iat, exp, created_at AS createdAt, revoked
+       FROM sessions WHERE jti = ?`,
+      [jti]
+    );
   },
 
-  /** 撤销某用户全部会话（改密即踢下线、未来「退出所有设备」）。 */
-  revokeUserSessions(username: string): number {
-    const r = getDb()
-      .prepare('UPDATE sessions SET revoked = 1 WHERE username = ? AND revoked = 0')
-      .run(username);
-    return Number(r.changes);
+  /** 撤销某用户全部会话（改密后调用，双保险：pv 机制之外再兜一层）。 */
+  async revokeUserSessions(username: string): Promise<void> {
+    await execute('UPDATE sessions SET revoked = 1 WHERE username = ? AND revoked = 0', [username]);
   },
 
-  /** 清理已过期行（启动时或定期调用，防止 sessions 无限增长）。 */
-  cleanExpiredSessions(nowSec: number): number {
-    const r = getDb().prepare('DELETE FROM sessions WHERE exp < ?').run(nowSec);
-    return Number(r.changes);
+  /** 清理已过期会话（可由定时任务调用，当前未挂）。 */
+  async cleanExpiredSessions(nowSec: number): Promise<void> {
+    await execute('DELETE FROM sessions WHERE exp < ?', [nowSec]);
   },
 };

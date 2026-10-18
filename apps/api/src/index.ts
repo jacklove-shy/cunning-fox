@@ -25,11 +25,22 @@ const PORT = Number(process.env.PORT || 3001);
 // 显式设 HOST=0.0.0.0（并务必先给工具接口加鉴权）。
 const HOST = process.env.HOST || '127.0.0.1';
 
-ensureSeed();
-initDb(); // 打开 SQLite（node:sqlite 内置，零 npm 依赖）并执行版本化迁移
-migrateAuthFromJson(); // 一次性：legacy auth.json 数据搬进 SQLite（之后自动跳过）
-ensureAuthSeed(); // 权限系统：首次运行创建默认管理员 admin/admin1234
-recoverJobs(); // 恢复任务队列：重启前未完成的任务标记为中断
+/**
+ * 启动序列（MySQL 全链路异步）：
+ *   ensureSeed        → JSON 内容数据种子（data/*.json，与数据库无关，保持同步）
+ *   initDb            → 创建 MySQL 连接池 + 执行版本化迁移
+ *   migrateAuthFromJson → 一次性把 legacy auth.json 搬进 MySQL（之后自动跳过）
+ *   ensureAuthSeed    → 首次运行创建默认管理员
+ *   recoverJobs       → 任务队列恢复（与库无关，保持同步）
+ * 任一 await 失败直接抛错，让进程起不来——静默兜底会推迟故障暴露点。
+ */
+async function bootstrap() {
+  ensureSeed();
+  await initDb(); // 创建连接池 + 执行迁移（MySQL）
+  await migrateAuthFromJson(); // 一次性：legacy auth.json 数据搬进 MySQL
+  await ensureAuthSeed(); // 权限系统：首次运行创建默认管理员 admin/admin1234
+  recoverJobs(); // 恢复任务队列：重启前未完成的任务标记为中断
+}
 
 const app = express();
 app.use(cors({ origin: true }));
@@ -177,8 +188,15 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`[api] http://${HOST === '0.0.0.0' ? '127.0.0.1' : HOST}:${PORT}  bind=${HOST}  (posts=${posts().length}, tools=${tools().length})`);
-  console.log(`[api] 静态托管：${fs.existsSync(dist) ? dist : '未构建（开发时由 Vite 提供前端）'}`);
-  if (HOST === '0.0.0.0') console.warn('[api] ⚠ 已对外监听：工具运行时无鉴权，请勿在不可信网络使用');
-});
+bootstrap()
+  .then(() => {
+    app.listen(PORT, HOST, () => {
+      console.log(`[api] http://${HOST === '0.0.0.0' ? '127.0.0.1' : HOST}:${PORT}  bind=${HOST}  (posts=${posts().length}, tools=${tools().length})`);
+      console.log(`[api] 静态托管：${fs.existsSync(dist) ? dist : '未构建（开发时由 Vite 提供前端）'}`);
+      if (HOST === '0.0.0.0') console.warn('[api] ⚠ 已对外监听：工具运行时无鉴权，请勿在不可信网络使用');
+    });
+  })
+  .catch((e) => {
+    console.error('[api] 启动失败（数据库/迁移异常），进程退出：', e);
+    process.exit(1);
+  });

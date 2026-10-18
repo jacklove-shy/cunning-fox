@@ -1,32 +1,34 @@
--- 001_auth.sql —— 账号与会话（用户 brief 中优先迁移的两张表）
--- 方言：SQLite。迁 PostgreSQL 时对应 002_auth.pg.sql（SERIAL→BIGSERIAL、TEXT 不变）。
+-- auth 域表结构（MySQL 8.0.16+ 方言，InnoDB + utf8mb4）
+-- 与 SQLite 版一一对应；ISO 时间串仍用 VARCHAR 存，避开驱动层时区转换的坑
+-- 约束全部落在库里（PK/FK/CHECK/索引），不止靠应用层自觉——企业做法
 
 CREATE TABLE IF NOT EXISTS users (
-  username   TEXT PRIMARY KEY,
-  role       TEXT NOT NULL CHECK (role IN ('admin', 'user')),
-  salt       TEXT NOT NULL,                -- scrypt 盐（hex）
-  hash       TEXT NOT NULL,                -- scrypt 哈希（hex，64 字节）
-  pv         INTEGER NOT NULL DEFAULT 0,   -- 密码版本号：改密 +1，旧 Token 全部作废
-  created_at TEXT NOT NULL
-);
+  username   VARCHAR(20)  NOT NULL COMMENT '登录名（字母/数字/中文，2-20 字符）',
+  role       VARCHAR(10)  NOT NULL DEFAULT 'user' COMMENT 'admin=全权限 / user=读+礼账CRUD',
+  salt       VARCHAR(64)  NOT NULL COMMENT 'scrypt 盐（hex）',
+  hash       VARCHAR(128) NOT NULL COMMENT 'scrypt 哈希（hex，64 字节）',
+  pv         INT          NOT NULL DEFAULT 0 COMMENT '密码版本号：改密 +1，旧 Token 随之作废',
+  created_at VARCHAR(32)  NOT NULL COMMENT 'ISO 时间串',
+  PRIMARY KEY (username),
+  CONSTRAINT chk_users_role CHECK (role IN ('admin', 'user'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 会话表：签发的每个 Token 落一行（jti 为主键）。
--- 现阶段 Token 仍是 HMAC 自签（无状态），本表提供「可撤销」能力：
--- 登出单个会话 / 改密踢全员 / 未来 refresh token 轮换的落点。
 CREATE TABLE IF NOT EXISTS sessions (
-  jti        TEXT PRIMARY KEY,
-  username   TEXT NOT NULL REFERENCES users(username) ON DELETE CASCADE,
-  role       TEXT NOT NULL,
-  pv         INTEGER NOT NULL DEFAULT 0,
-  iat        INTEGER NOT NULL,             -- 签发时间（秒）
-  exp        INTEGER NOT NULL,             -- 过期时间（秒）
-  created_at TEXT NOT NULL,
-  revoked    INTEGER NOT NULL DEFAULT 0    -- 0 有效 / 1 已撤销
-);
-CREATE INDEX IF NOT EXISTS idx_sessions_username ON sessions(username);
+  jti        VARCHAR(18)   NOT NULL COMMENT '会话 ID = Token payload 里的 jti',
+  username   VARCHAR(20)   NOT NULL,
+  role       VARCHAR(10)   NOT NULL DEFAULT 'user',
+  pv         INT           NOT NULL DEFAULT 0,
+  iat        INT UNSIGNED  NOT NULL COMMENT '签发时间（unix 秒）',
+  exp        INT UNSIGNED  NOT NULL COMMENT '过期时间（unix 秒，2038 年前 INT 够用）',
+  created_at VARCHAR(32)   NOT NULL,
+  revoked    TINYINT       NOT NULL DEFAULT 0 COMMENT '0=有效 1=已撤销（改密/单会话踢出）',
+  PRIMARY KEY (jti),
+  CONSTRAINT fk_sessions_user FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE,
+  INDEX idx_sessions_username (username)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- auth_meta：auth 子系统的键值存储（当前只放 HMAC 密钥 secret）。
 CREATE TABLE IF NOT EXISTS auth_meta (
-  k TEXT PRIMARY KEY,
-  v TEXT NOT NULL
-);
+  k VARCHAR(64) NOT NULL COMMENT '配置键（如 hmac_secret）',
+  v TEXT        NOT NULL COMMENT '配置值',
+  PRIMARY KEY (k)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
