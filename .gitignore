@@ -23,6 +23,9 @@ apps/api/data/comments.json
 apps/api/data/friends.json
 apps/api/data/donations.json
 
+# ---- 工具运行时本机配置（含本机磁盘路径 / LLM 密钥，属个人环境信息） ----
+apps/api/data/tool-config.json
+
 # ---- 工具运行时临时产物 / 个人求职同步数据 ----
 apps/api/data/work/
 apps/api/data/job-sync/

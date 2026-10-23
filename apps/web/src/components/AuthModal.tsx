@@ -146,7 +146,7 @@ export function AuthModal({
 
             <p className="text-center text-[11px] muted">
               {tab === 'login'
-                ? '默认管理员 admin / admin1234，登录后请在「账户」里改密'
+                ? '首次启动的管理员密码会打印在后端控制台（未配置时随机生成）'
                 : '注册即为普通用户：可留言、评论，不能管理站点'}
             </p>
           </form>

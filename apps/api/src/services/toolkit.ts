@@ -27,19 +27,27 @@ export interface ToolConfig {
 const CONFIG_FILE = 'tool-config.json';
 const WORK_DIR = path.join(process.cwd(), 'data', 'work');
 
+// 候选路径按顺序探测，第一个存在的即用。
+// 优先用环境变量 / PATH，探测不到再退到常见的本地安装位置（可自行改 tool-config.json 覆盖）。
 const DEFAULT_FFMPEG_CANDIDATES = [
-  'E:\\WorkBuddy\\tools\\ffmpeg\\bin\\ffmpeg.exe',
-  'E:\\WorkBuddy\\tools\\ffmpeg\\bin\\ffmpeg',
+  process.env.FFMPEG_PATH || '',
   'ffmpeg',
 ];
 
 const DEFAULT_PYTHON_CANDIDATES = [
-  `${process.env.USERPROFILE || 'C:\\Users\\赵子轩'}\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe`,
+  process.env.PYTHON_PATH || '',
+  // WorkBuddy 托管的 Python 运行时（存在则用）
+  process.env.USERPROFILE
+    ? path.join(process.env.USERPROFILE, '.workbuddy', 'binaries', 'python', 'envs', 'default', 'Scripts', 'python.exe')
+    : '',
   'python',
 ];
 
 function defaultRoots(): string[] {
-  const cands = [process.cwd(), 'C:\\', 'D:\\', 'E:\\', process.env.USERPROFILE || ''];
+  // 默认只允许访问「项目目录」与「用户主目录」——
+  // 早期版本把 C:\ D:\ E:\ 整盘放进白名单，等于对外暴露整台机器；
+  // 现在收紧到最小必要范围，需要更多目录时在 tool-config.json 里显式添加。
+  const cands = [process.cwd(), process.env.USERPROFILE || ''];
   const out: string[] = [];
   for (const c of cands) {
     if (c && fs.existsSync(c) && !out.includes(c)) out.push(c);

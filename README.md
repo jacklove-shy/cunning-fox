@@ -1,7 +1,10 @@
-# 一只狡猾的狐狸 · 个人博客 / 工具集市 / 项目展示
+# 一只狡猾的狐狸 · 个人博客 / 工具集市
 
-一个前后端分离的全栈个人站。定位不是「技术博客」，而是**一个集市**：文章、工具、项目、学习路线都在里面，
-把求职自动化中台作为其中一个模块展示出来，方便面试官一眼看到「做过什么、怎么做的」。
+> 🦊 一个前后端分离的全栈个人站：文章系统、工具集市、任务队列、权限体系、垂直业务模块。
+> **MIT 许可开源** —— 拿去改成你自己的站。
+
+定位不是「技术博客」，而是一个**集市**：文章、工具、项目、学习路线都在里面，
+把求职自动化中台也做成其中一个模块展示，方便面试官一眼看到「做过什么、怎么做的」。
 
 ## 技术栈
 
@@ -9,6 +12,7 @@
 | --- | --- | --- |
 | 前端 | React 18 + TypeScript + Vite + Tailwind CSS + React Router | 手写设计系统（CSS 变量双主题），不引 UI 库 |
 | 后端 | Node + Express + TypeScript | REST，JSON 文件存储，写入原子化 |
+| 数据库 | MySQL 8（mysql2 连接池 + 版本化迁移） | 账号 / 会话等鉴权数据走 MySQL；内容数据仍是 JSON |
 | 工具运行时 | 任务队列 + 子进程（ffmpeg / Python+Pillow / Node 脚本） | 重活跑服务端，前端轮询进度；详见「工具运行时」 |
 | 内容 | Markdown（react-markdown + GFM） | 文章正文存 Markdown，前后端都不用富文本编辑器 |
 | 工程 | npm workspaces（monorepo） | 一条命令起双端 |
@@ -25,6 +29,30 @@ Windows 直接双击 `start.bat`；单端口生产模式双击 `start-prod.bat`�
 首次启动会自动灌入示例内容（8 篇文章 / 14 个工具 / 6 个项目），数据落在 `apps/api/data/*.json`。
 想恢复示例数据：`npm run seed -- --force`。
 
+### 首次启动需要准备什么
+
+| 依赖 | 是否必需 | 说明 |
+| --- | --- | --- |
+| Node.js 20+ | **必需** | 建议用 nvm 管理版本 |
+| MySQL 8 | 必需 | 账号 / 会话 / 清北模块的数据存在这里；也可只跑内容部分（见下） |
+| ffmpeg | 可选 | 视频转码 / 去水印 / 字幕工具要用；装好后把路径配进 `tool-config.json` |
+| Python 3 + Pillow | 可选 | 图片去水印要用 |
+
+**MySQL 建库**（一条命令）：
+
+```sql
+CREATE DATABASE portfolio CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'portfolio'@'127.0.0.1' IDENTIFIED BY '你的密码';
+GRANT ALL PRIVILEGES ON portfolio.* TO 'portfolio'@'127.0.0.1';
+```
+
+然后复制 `apps/api/.env.example` 为 `apps/api/.env` 并按需修改（连接信息、端口等）。
+迁移脚本会在 API 启动时自动执行（`apps/api/src/db/migrations/`），无需手动建表。
+
+**只想跑内容部分、不想装 MySQL？** 把 `apps/api/src/index.ts` 里的 `initDb()` 相关启动步骤注释掉即可——
+文章、工具、归档、友链、留言、RSS 全部走 JSON 文件，不依赖数据库；
+只有登录、评论提交、婚礼礼账本、清北成长助手这几个模块需要鉴权。
+
 ## 目录结构
 
 ```
@@ -32,20 +60,24 @@ portfolio/
 ├─ apps/
 │  ├─ web/                    # 前端
 │  │  └─ src/
-│  │     ├─ pages/            # Home / Posts / PostDetail / Tools / ToolRunner / Archives / Friends / Guestbook / About / Admin
-│  │     ├─ components/       # Layout(导航+搜索+主题) / ui(卡片+分页)
-│  │     ├─ tools/            # 工具注册表 registry.ts + 运行时基建 runtime.tsx + builtins/（13 个可用工具）
-│  │     └─ lib/              # api.ts（请求与 useApi）+ types.ts
+│  │     ├─ pages/            # Home / Posts / PostDetail / Tools / ToolRunner / Archives / Friends / Guestbook / Nav / Donate / License / About / Admin / NotFound
+│  │     ├─ components/       # Layout(导航+搜索+主题) / Sidebar / PostRow / Comments / AuthModal / UserMenu / ui(卡片+分页)
+│  │     ├─ tools/            # 工具注册表 registry.ts + 运行时基建 runtime.tsx + builtins/（站内可用的工具组件）
+│  │     └─ lib/              # api.ts（请求与 useApi）+ auth.ts（会话）+ types.ts
 │  └─ api/                    # 后端
 │     ├─ src/
-│     │  ├─ index.ts          # 入口：路由挂载 + 聚合搜索 + 静态托管
-│     │  ├─ routes/           # posts / tools / extra(归档友链留言时间线) / toolkit(工具运行时)
-│     │  ├─ services/         # toolkit(队列/配置/进程/路径守卫) + media/subtitle/resume/videosearch/handlers
+│     │  ├─ index.ts          # 入口：路由挂载 + 聚合搜索 + RSS + 静态托管
+│     │  ├─ routes/           # posts / tools / extra(归档友链留言时间线) / toolkit(工具运行时) / wedding / qingbei / auth / ai
+│     │  ├─ services/         # toolkit(队列/配置/进程/路径守卫) + auth(密码+Token) + media/subtitle/resume/videosearch/handlers
+│     │  ├─ repo/             # auth DAO（账号/会话数据访问的唯一通道，换库只改这里）
+│     │  ├─ db.ts             # MySQL 连接池 + 版本化迁移执行器
 │     │  ├─ store.ts          # JSON 读写（临时文件 + rename 原子写）
-│     │  ├─ auth.ts           # x-admin-token 校验
+│     │  ├─ auth.ts           # 管理员鉴权（ADMIN_TOKEN 或 JWT admin）
 │     │  └─ seed.ts           # 示例内容
 │     ├─ scripts/             # 子进程脚本：img_clean.py（Pillow 去水印）/ nowcoder_sync.cjs（牛客抓题）
 │     └─ data/*.json          # 内容即数据（+ work/ 任务状态与输出）
+├─ docs/                      # API 契约 / 架构巡检 / 云上线方案 / QA 报告
+├─ LICENSE                    # MIT
 └─ start.bat / start-prod.bat
 ```
 
@@ -68,8 +100,9 @@ portfolio/
 
 完整契约见 [`docs/API.md`](docs/API.md)（含工具运行时的全部接口与实现约定）。
 
-管理 token 默认 `dev-token`，可用环境变量覆盖：`ADMIN_TOKEN=xxx npm run dev:api`。
-前端「管理」页右上角填同一个 token 即可写文章。
+管理接口的写操作需要 `x-admin-token` 请求头。
+该 token 由环境变量 `ADMIN_TOKEN` 提供；**未设置时这条通道直接关闭**（只剩右上角登录签发的 JWT 一条路），
+需要兼容旧调用方时显式设 `ADMIN_TOKEN=你的强口令`。
 
 ## 工具运行时（本机服务器模式）
 
@@ -82,9 +115,16 @@ portfolio/
 | 外链 / 说明 | 7 | 求职中台 / 本站 / 牛客项目 / QQBot / 插件集 / 小游戏 / BOSS 助手（扩展，仅说明） | 新窗口或「即将上线」说明页 |
 
 新增一个服务端工具 = `services/handlers.ts` 注册处理器 + `tools/registry.ts` 映射组件，前端零改动。
-视频类工具依赖 ffmpeg：把静态版解压到 `E:\WorkBuddy\tools\ffmpeg\bin\`（或在工具页「环境检测」里配置路径），未安装时界面会显示缺失并给出指引。
+视频类工具依赖 ffmpeg：装好后把可执行文件路径填进 `apps/api/data/tool-config.json` 的 `ffmpegPath`
+（或设环境变量 `FFMPEG_PATH`），未安装时界面会显示缺失并给出指引。
+Python 同理：填 `pythonPath` 或设 `PYTHON_PATH`。
+`tool-config.json` 含本机环境信息，已在 `.gitignore` 中，仓库不提供——首次使用按上面的说明自建一份即可。
 
-**权限系统（本地模式）**：含隐私数据的模块（婚礼礼账本）已接入登录鉴权——默认管理员 `admin / admin1234`（首次启动自动创建，控制台会打印警告，请尽快在「账户」页改密）；普通用户仅能读与记账，清空、用户增删改仅管理员。Token 为 HMAC 自签 JWT 风格、30 天有效，前端 `lib/api.ts` 自动随请求携带；新增受保护模块只需在路由包一层 `requireAuth()` 或 `requireAuth('admin')`（见 `docs/API.md` 权限系统章节）。
+**权限系统**：含隐私数据的模块（婚礼礼账本）已接入登录鉴权——首次启动会**随机生成**管理员密码并打印在后端控制台
+（只显示一次，务必保存；也可在启动前设 `AUTH_ADMIN_PW=你的口令` 指定固定密码），随后请到「账户」页改密；
+普通用户仅能读与记账，清空、用户增删改仅管理员。
+Token 为 HMAC 自签 JWT 风格、30 天有效，前端 `lib/api.ts` 自动随请求携带；
+新增受保护模块只需在路由包一层 `requireAuth()` 或 `requireAuth('admin')`（见 `docs/API.md` 权限系统章节）。
 
 ## 页面
 
@@ -108,9 +148,9 @@ portfolio/
 |---|---|---|
 | `wechat.png` | 微信收款码 | 415×415 |
 | `alipay.png` | 支付宝收款码 | 900×900 |
-| `contact-wechat.png` | 源码授权页的「微信扫码咨询」 | 717×717 |
+| `contact-wechat.png` | 开源说明页的「微信扫码交流」 | 717×717 |
 
-建议先用截图工具把二维码裁成正方形再加一圈白边（静区），整张宣传海报直接塞进 220px 的框里二维码只有 60px 左右，手机扫不出来。裁图脚本在 `E:\WorkBuddy\tools\qr-prep.py`（自动求墨迹包围盒）。
+建议先用截图工具把二维码裁成正方形再加一圈白边（静区），整张宣传海报直接塞进 220px 的框里二维码只有 60px 左右，手机扫不出来。
 
 ## 部署
 
@@ -125,63 +165,71 @@ portfolio/
 
 ### 上线前检查清单
 
-1. **换掉硬编码地址**：`apps/web/src/pages/Home.tsx` 和 `Console.tsx` 里求职中台的外链写的是 `http://127.0.0.1:8080`，上线前改成你的域名或内网穿透地址（或用 `import.meta.env.VITE_CONSOLE_URL` 注入）。
-2. **改管理 token**：`ADMIN_TOKEN=你的强口令 npm run start`，别用默认 `dev-token`。
-3. **改默认管理员密码**：首次启动后到「账户」页把 `admin / admin1234` 改掉，别用默认口令（改密会立即作废所有旧 Token）。
+1. **换掉硬编码地址**：`apps/web/src/pages/Home.tsx` 里求职中台的外链默认是 `http://127.0.0.1:8080`，
+   上线前用 `VITE_CONSOLE_URL` 注入你的域名（或改成你自己的项目地址）。
+2. **确认管理员口令**：首次启动的控制台输出里有随机生成的管理员密码，登录后立刻在「账户」页改掉。
+   若要用 `x-admin-token` 走旧接口，设 `ADMIN_TOKEN=你的强口令`（不设则该通道关闭）。
+3. **数据库口令**：`apps/api/.env` 里的 `DB_PASSWORD` 不要用弱口令；`.env` 已被 `.gitignore` 忽略，确认没误提交。
 4. **监听地址**：默认只监听 `127.0.0.1`（工具运行时能读写本机文件，不要裸奔到公网）。确实需要对外时 `HOST=0.0.0.0 npm run start`，并先给 `/api/toolkit/*` 加鉴权。
 5. **端口**：默认 3001，可用 `PORT=8080 npm run start` 覆盖。
 6. **进程守护**：小服务器用 `pm2 start "npm run start" --name portfolio`（或 `tsx src/index.ts`），保证崩了自动拉起。
 7. **反向代理 + HTTPS**：Nginx 把 `你的域名` 反代到 `127.0.0.1:3001`，配 Let's Encrypt 证书。
 8. **备案**：域名解析到**大陆服务器**必须 ICP 备案（腾讯云/阿里云控制台一键申请）；用香港/海外轻量可免备案但国内访问偏慢。
-9. **数据备份**：`apps/api/data/*.json` 是整个站的内容，定期打包备份即可（暂未上数据库，备份成本低）。
+9. **数据备份**：`apps/api/data/*.json`（内容）与 MySQL（账号会话）都要定期备份。
 
 > 进阶：内容多了把 JSON 换成 SQLite（`better-sqlite3`），接口层一行都不用改；或把前端丢 Vercel/CF Pages、后端留小服务器（记得开 CORS）。
 
-## 后续路线
+## 路线图
 
-1. 存储升级：JSON → SQLite（`better-sqlite3`），接口层不动
-2. 工具扩充：按 handlers + registry 两处注册继续加（如下载器、格式工厂类）
-3. 时间线页面：`/api/timeline` 数据与接口已就绪，前端页待做
-4. 文章详情页评论区接入（留言板已做，接口通用）
-5. 部署上线：域名 + HTTPS + 备案（工具运行时的文件接口加鉴权后再公网）
+想一起做的话，从这几个方向挑：
 
-## 跨端兼容基线（P0 · 用户 2026-10-17 提出）
+1. **工具扩充**：按 `services/handlers.ts` + `tools/registry.ts` 两处注册继续加（下载器、格式工厂、剪贴板工具……）
+2. **存储统一**：内容侧 JSON → PostgreSQL，接口层不动（DAO 抽象已就绪，只改 `repo/` 与 `db.ts`）
+3. **时间线页面**：`/api/timeline` 数据与接口已就绪，前端页待做
+4. **PWA 完善**：Service Worker 离线壳、`100dvh` 适配 iOS 地址栏、触控目标 ≥44px 的统一规范
+5. **国际化**：目前纯中文，抽出文案层后即可加多语言
+6. **无障碍**：键盘导航、焦点可见、`aria-live` 播报
 
-> 用户原话：「最好做一个 PC 端加移动端、安卓端、OS 端都能用的那种，都是可以兼容的。」
+## 开源说明
 
-目标：一套 React 代码 + 一个域名，PC 浏览器 / 手机浏览器（Android + iOS）/ 可安装（PWA），体验一致可用。
+本项目采用 **MIT 许可**（见 [LICENSE](LICENSE)）：可自由使用、修改、商用、再分发，只需保留版权与许可声明。
 
-### 现状盘点（2026-10-17）
-- 已具备：Tailwind 响应式断点（`sm:` / `md:` / `lg:` 在 Home、Tools、Projects 页已用），容器 `max-w-content px-5` 自适应
-- 缺口：`index.html` 无 `viewport-fit=cover`；`index.css` 无 `env(safe-area-inset-*)`、无 `100dvh` 兜底；无 PWA manifest / Service Worker；导航在手机上是横向滚动还是折叠未验证；触控目标未统一到 44px
+欢迎：
+- **提 Issue** 报 bug、提需求
+- **Pull Request** 提改进（新增工具、改样式、补文档都欢迎）
+- 在你自己的项目里使用它（保留一行出处即可）
 
-### 硬性要求
-1. **断点**
-   - `<640` 手机：单列；导航收起为抽屉或底部 Tab；表格类内容降级为卡片；按钮/输入 ≥44px 高
-   - `640–1024` 平板：两列网格
-   - `≥1024` PC：三/四列，保持现有信息密度
-2. **iOS Safari**
-   - `100vh` → `100dvh`，避免地址栏挤掉底部按钮
-   - `viewport-fit=cover` + 底部固定元素加 `padding-bottom: env(safe-area-inset-bottom)`
-   - 表单 `font-size ≥16px`，防聚焦自动放大
-   - 补 `-webkit-tap-highlight-color` 与 `:active` 反馈
-3. **Android / 国产内核**（微信、QQ、UC）
-   - 关键布局不依赖 `position: sticky`，降级 fixed
-   - 拖拽/滑动用 Pointer Events
-   - 接口请求加 `AbortController` 超时兜底（弱网不白屏）
-4. **桌面端**
-   - 深色模式跟随 `prefers-color-scheme`，同时保留手动切换（现已手动，补跟随）
-   - `⌘/Ctrl+K` 搜索保留，移动端隐藏快捷键提示
-5. **可安装（PWA）**
-   - `manifest.webmanifest`（name/short_name/theme_color/display:standalone + 192/512 图标）
-   - Service Worker 缓存壳（首页 + 静态资源），离线给提示页
-   - `apple-touch-icon` 补齐，iOS「添加到主屏幕」可用
-   - 需要推送再考虑 Capacitor 套壳，不做原生重写
+### 不含在仓库里的东西
 
-### 验收清单
-- [ ] Chrome DevTools 375 / 390 / 768 / 1440 四档截图无横向滚动
-- [ ] iPhone Safari：底部/吸附元素不被地址栏遮挡，刘海屏不压内容
-- [ ] 触控目标 ≥44×44px，相邻间距 ≥8px
-- [ ] 横竖屏切换布局不塌
-- [ ] 深色模式对比度 ≥4.5:1
-- [ ] 断网时不白屏，有明确提示
+| 内容 | 原因 |
+| --- | --- |
+| `apps/api/data/tool-config.json` | 含本机磁盘路径与 LLM 密钥，按需自建 |
+| `apps/api/data/auth.json` | 密码哈希与 Token 签名密钥，运行时生成 |
+| `apps/api/data/*.db` | MySQL 之外的本地运行时数据 |
+| `apps/api/data/{comments,friends,donations}.json` | 用户生成内容，运行时自动建空文件 |
+| `apps/api/data/work/`、`job-sync/` | 工具任务产物与个人求职数据 |
+| `.env` | 本地配置（模板见 `apps/api/.env.example`） |
+
+### 安全默认值
+
+开源项目最容易被忽略的问题是「默认密码 / 默认后门」，本仓库做了这些处理：
+
+- 首次启动**随机生成**管理员密码并打印到控制台，不用固定口令（可用 `AUTH_ADMIN_PW` 指定）
+- `ADMIN_TOKEN` 未设置时，`x-admin-token` 这条旧式管理员通道**直接关闭**，只保留 JWT 鉴权
+- 工具运行时的文件访问白名单默认只含「项目目录」与「用户主目录」，不再整盘放行
+- 路径守卫 `isSensitivePath()` 拦截 `data/`、系统目录、`.git`/`.ssh`/`.env`、各类私钥文件
+- 工具接口可用 `ENABLE_TOOLKIT=0` 整体关闭——**公网部署务必设这个**
+
+### 二次开发提示
+
+| 想改什么 | 改哪里 |
+| --- | --- |
+| 加一个纯前端工具 | `apps/web/src/tools/builtins/` 建组件 + 在 `registry.ts` 注册 |
+| 加一个服务端工具 | `apps/api/src/services/handlers.ts` 注册处理器 + `registry.ts` 映射 |
+| 加一个页面 | `apps/web/src/pages/` 建组件 + 在路由表挂载 |
+| 改内容数据 | 直接编辑 `apps/api/data/*.json`，或写接口用管理员 token |
+| 换数据库 | 只改 `apps/api/src/db.ts` 与 `repo/auth.ts`，上游业务代码零改动 |
+
+---
+
+如果这个项目帮到你，欢迎 star 一份；发现 bug 或想合作，直接开 Issue 聊。

@@ -93,18 +93,34 @@ export async function migrateAuthFromJson(): Promise<void> {
 
 /* ---------------- 种子 ---------------- */
 
-/** 首次运行：若没有任何用户，创建默认管理员（密码来自 AUTH_ADMIN_PW 环境变量或 admin1234） */
+/**
+ * 首次运行：若没有任何用户，创建默认管理员。
+ *
+ * 密码来源优先级：AUTH_ADMIN_PW 环境变量 > 随机生成。
+ * 早期版本硬编码为固定口令 'admin1234'——一旦开源，任何 clone 的人
+ * 都能用这组公开口令登录自己部署的实例。现在默认改为随机生成并打印到控制台，
+ * 需要固定口令的场景（自动化测试 / 团队共享）显式设 AUTH_ADMIN_PW 即可。
+ */
 export async function ensureAuthSeed(): Promise<void> {
   if ((await authRepo.countUsers()) > 0) {
     // 密钥兜底：老数据可能没有 secret
     await loadSecret();
     return;
   }
-  const pw = process.env.AUTH_ADMIN_PW || 'admin1234';
+  const configured = process.env.AUTH_ADMIN_PW;
+  const pw = configured || crypto.randomBytes(9).toString('base64url');
   const { salt, hash } = hashPassword(pw);
   await authRepo.insertUser({ username: 'admin', role: 'admin', salt, hash, pv: 0, createdAt: new Date().toISOString() });
   await loadSecret();
-  console.warn(`[auth] 已创建默认管理员  admin / ${pw}  （请尽快在「账户」页修改密码）`);
+  if (configured) {
+    console.warn(`[auth] 已创建默认管理员  admin / ${pw}  （来自 AUTH_ADMIN_PW，请尽快在「账户」页改密）`);
+  } else {
+    console.warn(
+      `[auth] 已创建默认管理员  admin / ${pw}\n` +
+        `       ↑ 这是本次随机生成的密码，仅显示这一次，请立即保存。\n` +
+        `         如需固定口令，启动前设置环境变量 AUTH_ADMIN_PW=你的口令。`,
+    );
+  }
 }
 
 /* ---------------- 密码（逻辑未动） ---------------- */
