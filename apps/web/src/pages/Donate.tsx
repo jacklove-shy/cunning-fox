@@ -368,7 +368,7 @@ export default function Donate() {
               </p>
               <div className="donate-amount-grid">
                 {amounts.map((a, i) => {
-                  const isPicked = !custom.trim() && (picked ?? amounts[1] ?? amounts[0]) === a;
+                  const isPicked = picked !== null && picked === a && !custom.trim();
                   const isWide = i === amounts.length - 1 && amounts.length > 8;
                   return (
                     <button
@@ -463,18 +463,33 @@ export default function Donate() {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-wrap items-center gap-2">
-                <input
-                  className="input !py-1.5 text-sm"
-                  style={{ maxWidth: 200, flex: '1 1 140px' }}
-                  placeholder="昵称（可空）"
-                  value={nick}
-                  maxLength={24}
-                  onChange={(e) => setNick(e.target.value)}
-                />
-                <button className="btn btn-primary h-9 text-xs" onClick={claim} disabled={busy || !ordered || finalAmount <= 0}>
-                  {busy ? '提交中…' : '我已完成赞赏'}
-                </button>
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <div className="min-w-0" style={{ flex: '1 1 160px', maxWidth: 240 }}>
+                    <label className="donate-field-label" htmlFor="donate-nick">昵称（可空）</label>
+                    <input
+                      id="donate-nick"
+                      className="input !py-1.5 text-sm"
+                      style={{ width: '100%' }}
+                      placeholder="昵称（可空）"
+                      value={nick}
+                      maxLength={24}
+                      autoComplete="off"
+                      onChange={(e) => setNick(e.target.value)}
+                    />
+                  </div>
+                  <button
+                    className="btn btn-primary h-9 text-xs"
+                    onClick={claim}
+                    disabled={busy || !ordered || finalAmount <= 0}
+                    aria-describedby="donate-claim-hint"
+                  >
+                    {busy ? '提交中…' : '我已完成赞赏'}
+                  </button>
+                </div>
+                <p id="donate-claim-hint" className="text-[12px] leading-relaxed muted">
+                  昵称与留言会在管理员确认后公开展示在赞赏墙，留空将以「匿名好心人」显示；请先选择或输入金额再提交。
+                </p>
                 {tip && <span className="text-[12px] muted">{tip}</span>}
               </div>
             )}
@@ -527,11 +542,11 @@ export default function Donate() {
                     )}
                   </div>
                   <div className="donate-pay-station__amount">
-                    <span className="donate-pay-station__amount-label">应付金额</span>
+                    <span className="donate-pay-station__amount-label">建议金额</span>
                     <span className="donate-pay-station__amount-value">{moneyTrim(finalAmount || 0)}</span>
                   </div>
                   <p className="donate-pay-station__hint">
-                    {method?.note || '扫码支付'}，二维码 15 分钟内有效；到账后可在下方留名，我确认后就会出现在赞赏墙上
+                    {method?.note || '扫码支付'}，此收款码为固定码、不含金额，请在微信/支付宝里手动输入上方「建议金额」完成支付；二维码 15 分钟内有效，到账后可在下方留名，我确认后就会出现在赞赏墙上
                   </p>
                   <p className="donate-pay-station__order">订单号 {orderNo}</p>
                   <div className="donate-pay-methods">
@@ -744,6 +759,9 @@ function LicenseBlock() {
       <p className="kicker">{data.kicker || 'source license'}</p>
       <h2 className="mt-2 text-xl font-bold tracking-tight">{data.title}</h2>
       {data.tagline && <p className="mt-1.5 text-[13px] muted">{data.tagline}</p>}
+      <p className="mt-2 text-[12px] leading-relaxed muted">
+        这是一次性买断整站源码（含完整交付物），与上方「赞赏」不同：赞赏是纯心意、不产生任何交付或承诺。
+      </p>
 
       <div className="card mt-4 flex flex-wrap items-center gap-5 p-5">
         <div>

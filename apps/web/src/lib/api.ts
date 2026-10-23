@@ -47,6 +47,8 @@ export const http = {
   get: <T>(path: string) => request<T>(path),
   post: <T>(path: string, body: unknown, token?: string) =>
     request<T>(path, { method: 'POST', body: JSON.stringify(body), headers: token ? { 'x-admin-token': token } : {} }),
+  put: <T>(path: string, body: unknown, token?: string) =>
+    request<T>(path, { method: 'PUT', body: JSON.stringify(body), headers: token ? { 'x-admin-token': token } : {} }),
   patch: <T>(path: string, body: unknown, token?: string) =>
     request<T>(path, { method: 'PATCH', body: JSON.stringify(body), headers: token ? { 'x-admin-token': token } : {} }),
   del: <T>(path: string, token?: string) =>

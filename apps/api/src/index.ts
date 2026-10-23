@@ -12,6 +12,7 @@ import { toolsRouter } from './routes/tools.js';
 import { extraRouter } from './routes/extra.js';
 import { toolkitRouter } from './routes/toolkit.js';
 import { weddingRouter } from './routes/wedding.js';
+import { qingbeiRouter } from './routes/qingbei.js';
 import { authRouter } from './routes/auth.js';
 import { aiRouter } from './routes/ai.js';
 import { ensureAuthSeed, migrateAuthFromJson } from './services/auth.js';
@@ -110,6 +111,7 @@ if (process.env.ENABLE_TOOLKIT !== '0') {
   console.log('[api] toolkit 路由未挂载（ENABLE_TOOLKIT=0）→ 公网暴露更安全');
 }
 app.use('/api/wedding', weddingRouter);
+app.use('/api/qingbei', qingbeiRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/ai', aiRouter);
 

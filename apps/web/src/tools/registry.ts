@@ -15,6 +15,7 @@ import { NowcoderSync } from './builtins/NowcoderSync';
 import { WeddingLedger } from './builtins/WeddingLedger';
 import { DevToolbox } from './builtins/DevToolbox';
 import { AutoApplyGuide } from './builtins/AutoApplyGuide';
+import { QingbeiCoach } from './builtins/QingbeiCoach';
 
 /**
  * 工具注册表：决定每个工具"能不能用、怎么用"。
@@ -42,6 +43,7 @@ export const TOOL_REGISTRY: Record<string, ToolDef> = {
   'typing-test': { kind: 'builtin', run: TypingTest },
   'dev-toolbox': { kind: 'builtin', run: DevToolbox, edge: '数据不出浏览器' },
   'auto-apply-guide': { kind: 'builtin', run: AutoApplyGuide, edge: '读取本机状态' },
+  'qingbei-coach': { kind: 'builtin', run: QingbeiCoach, edge: '数据存博客数据库' },
 
   // —— 本机服务端能力（API /api/toolkit/* 驱动，任务队列执行）——
   'video-search-hub': { kind: 'builtin', run: VideoSearch, edge: '聚合检索' },

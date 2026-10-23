@@ -7,7 +7,7 @@ const now = '2026-10-17T10:00:00.000Z';
 
 export const SEED_META: Meta = {
   postCats: ['前端', '后端', 'AI', '工程化', '踩坑', '项目复盘'],
-  toolCats: ['影视工具', '去水印', '浏览器插件', '小游戏', '开发工具', 'AI 工具'],
+  toolCats: ['影视工具', '去水印', '浏览器插件', '小游戏', '开发工具', 'AI 工具', '学习工具'],
   site: {
     name: '一只狡猾的狐狸',
     tagline: '一个装着工具、笔记和作品的小集市',
@@ -473,6 +473,7 @@ export const SEED_TOOLS: Tool[] = [
   t('qqbot', 'QQ 机器人播报', '把中台的关键指标同步到手机：今日投递数、新邀约、待笔试提醒。', '我的项目', ['Bot API', 'Node.js'], { repo: 'https://github.com/', icon: '🤖' }),
   t('extensions', '浏览器插件集', '求职助手、网页标尺、JSON 格式化三个自用插件，覆盖调试与效率场景。', '我的项目', ['Manifest V3', 'Content Script', 'Service Worker'], { to: '/posts/chrome-extension-from-zero', icon: '🧩' }),
   t('games', '小游戏合集', '贪吃蛇、2048、打字测试，用 Canvas 与 React 各实现一遍，练手感也练动画。', '我的项目', ['Canvas', 'React', 'CSS 动画'], { repo: 'https://github.com/', icon: '🎮' }),
+  t('qingbei-coach', '清北成长助手', '目标拆解 + 弱科诊断 + 全网课程导航：把清北目标拆到每一科，按差距自动推荐该补的课。', '学习工具', ['学习', '高考', '目标管理', '课程导航', '河北'], { createdAt: '2026-10-18T20:00:00.000Z', hot: true, icon: '🎓' }),
 ];
 
 // 项目已并入 tools（分类：我的项目），不再单独维护 projects 模块。
